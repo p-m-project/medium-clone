@@ -6,7 +6,7 @@
         <meta name="keyword" content="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="sign-in-page.css">
+        <link rel="stylesheet" type="text/css" href="signUp.css">
 
     </head>
     <body>
@@ -21,12 +21,16 @@
                         </div>
                     </div>
                     <!-- plz add serach input and style the menu -->
-                    <div class="nav-menu">
-                        <span class="nav-menu-items">sign in</span>
-                        <span class="nav-menu-items">new post</span>
-                        <span class="nav-menu-items">about us</span>
-                        <span class="nav-menu-items-last">"add serach button here"</span>
-
+                    <div class="topnav">
+                        <a class="active" href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                        <div class="search-container">
+                          <form action="/action_page.php">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                          </form>
+                        </div>
                     </div>
 
                 </div>
