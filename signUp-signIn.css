@@ -97,7 +97,6 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
     min-width: 100%;
     min-height: 100%;
 }
-
 /* styling the elements related to sign in and sign up*/
 
 .form-container{
