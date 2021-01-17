@@ -13,48 +13,6 @@ body{
     width:100%;
     height:100%;
 }
-
-.nav{
-    width: 100%;
-    height: 75px;
-    display: flex;
-    justify-content: center;
-    border-bottom: solid 1px rgba(41, 41, 41, .2);
-}
-
-.nav-container{
-    height: 75px;
-    margin: 0 64px;
-    padding: 25px 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-}
-
-.nav-icon{
-    width: 50%;
-}
-.nav-icon .icon-title a{
-    color: black;  
-    font-size:25px;  
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.nav-menu{
-    width: 50%;
-    direction: rtl;
-    display: flex; 
-    flex-direction: row;  
-}
- /* This code just apply style on the items with class
- nav-menu-items. The div with nav-menu-items-last 
- shouldn't have mergin left to avoid conflict with 
- the left div */
-.nav-menu-items{
-    margin-left: 1vw;
-}
-
 button, input {
     overflow: visible;
 }
@@ -151,8 +109,27 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
     margin: 0 auto;
 
 }
+@media screen and (min-width:270px) and (max-width:480px){
+    .form-container{
+        max-width: 270px;
+    }
 
-@media screen and (min-width:1200px){
+    .signin-form{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:481px) and (max-width:768px){
+    .form-container{
+        max-width: 480px;
+    }
+
+    .signin-form{
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:768px){
     .form-container{
         max-width: 900px;
     }
@@ -216,70 +193,5 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
 .text-p{
     margin-bottom: 1vw;
 }
-/* style with navbar */
   
-  .topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
   
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .topnav a.active {
-    background-color: #2196F3;
-    color: white;
-  }
-  
-  .topnav .search-container {
-    float: right;
-  }
-  
-  .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
-  
-  .topnav .search-container button {
-    float: right;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .topnav .search-container button:hover {
-    background: #ccc;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav input[type=text] {
-      border: 1px solid #ccc;  
-    }
-  }
-
-
-

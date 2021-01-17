@@ -6,33 +6,53 @@
         <meta name="keyword" content="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="SignUp.css">
+        <link rel="stylesheet" type="text/css" href="navbar.css">
+        <link rel="stylesheet" type="text/css" href="signup-signin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+        <script src="nav.js"></script>
     </head>
     <body>
+ 
         <div>
             <nav class="nav">
                 <div class="nav-container">
                     <div class="nav-icon">
                         <div class="icon-title">
                             <a href="#" target="_blank" >
-                                MEDIUM SBU34
+                              <!--  MEDIUM SBU34--> 
+                              <img src="media/MEDIUM-SBU34.svg" alt="MEDIUM-SBU34">
                             </a>
                         </div>
                     </div>
-                    <!-- plz add serach input and style the menu -->
+                   
                     <div class="topnav">
                         <a class="active" href="#home">Home</a>
                         <a href="#about">About</a>
                         <a href="#contact">Contact</a>
+                        
+                        <!-- add this to sin in-->
+                        
+                            <div class="topnav-sandwich" >
+                                <a onclick="showMenu()">
+                                    <span class="fa fa-bars" ></span>
+                                </a>
+                                <div class="topnav-sandwich-links" style="display: none;">
+                                    <a class="active" href="#home">Home</a>
+                                    <a href="#about">About</a>
+                                    <a href="#contact">Contact</a>
+                                </div>
+                                
+                            </div>
+                        <!-- up to there-->
                         <div class="search-container">
                           <form action="/action_page.php">
                             <input type="text" placeholder="Search.." name="search">
                             <button type="submit"><i class="fa fa-search"></i></button>
                           </form>
                         </div>
+                        
                     </div>
+                   
 
                 </div>
             </nav>
