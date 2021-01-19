@@ -8,23 +8,27 @@ body {
   max-width: 1200px;
   margin: auto;
 }
+.flex-container{
+    display: flex;
+}
+.Demo{
+    display: flex;
+}
 
 .Grid {
     display: flex;
     flex-flow: row; 
     flex-wrap: wrap;
   }
+  .EndText{
+      display: flex;
+  }
 
-.Grid--gutters {
-    margin-left: -$gutter;
-    .Grid-cell {
-      padding-left: $gutter;
-        }
-    }
 
 .Grid--cols-3 > .Grid-cell {
         flex: 0 0 100%; 
       }
+      
 .Grid--cols-3 > .Grid-cell{
           flex: 1;
       }
