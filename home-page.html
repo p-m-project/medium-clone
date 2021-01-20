@@ -3,88 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>HomePge</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./home-page.css">
-    <link href="../webfont/fontawesome-free-5.13.0-web/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
     <div class="wrapper">
-        <div class="flex-container">
+        <!--navigation of page-->
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-icon">
+                    <div class="icon-title">
+                        <a href="#" target="_blank" >
+                            <!--  MEDIUM SBU34--> 
+                          <img src="media/MEDIUM-SBU34.svg" alt="MEDIUM-SBU34">
+                        </a>
+                    </div>
+                </div>
+                <!-- plz add serach input and style the menu -->
+                <div class="topnav">
+                    <a class="active" href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+
+                    <div class="topnav-sandwich" >
+                        <a onclick="showMenu()">
+                            <span class="fa fa-bars" ></span>
+                        </a>
+                        <div class="topnav-sandwich-links" style="display: none;">
+                            <a class="active" href="#home">Home</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                        
+                    </div>
+
+                    <div class="search-container">
+                      <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </form>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+        <!--MASOUMEH::::::::: -->
+
+        <header>
+            <!--style and add background picture later-->
+
+        </header>
+
+        <div class="favorite-posts flex-container">
+            <!--specify the class names related to the div. plz define a class for favorite-posts-->
             <img src="https://img.icons8.com/metro/26/000000/pin-2.png"/>
             <h1>Basic Grid</h1>
         </div>
+
+        <!--PARASTOO::::::::: -->
         <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-  
-                      <div class="Demo content-1of3">
-                          <p>1</p>
-                          <p>01</p>
-                          <p>01</p>
-                      </div>
-  
-                      <div>
-                          <p>111</p>
-                      </div>
-  
-                      <div class="EndText">
-                        <p>111</p>
-                        <p>111</p>
-                      </div>
-              
-                   </div>
-                </div>
-            </div> 
-
-
-          <div class="Grid-cell">
-              <div class="Demo content-1of3">
-                <div class="Grid-cell">
-
-                    <div class="Demo content-1of3">
-                        <p>01</p>
-                        <p>01</p>
-                        <p>01</p>
-                    </div>
-
-                    <div>
-                        <p>111</p>
-                    </div>
-
-                    <div class="EndText">
-                        <p>111</p>
-                        <p>111</p>
-                    </div>
-            
-                 </div>
-              </div>
-          </div>
-
-
-         <div class="Grid-cell">
-              <div class="Demo content-1of3">
-                <div class="Grid-cell">
-
-                    <div class="Demo content-1of3">
-                        <p>01</p>
-                        <p>01</p>
-                        <p>01</p>
-                    </div>
-
-                    <div>
-                        <p>111</p>
-                    </div>
-
-                    <div class="EndText">
-                        <p>111</p>
-                        <p>111</p>
-                    </div>
-            
-                 </div>
-              </div>
-          </div>
- 
-
+             <section>
+                 <article></article>
+                 <aside></aside>
+             </section>
         </div>
     </div>
 
