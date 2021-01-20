@@ -1,7 +1,6 @@
-
-body {
+body{
   color: #404040;
-  font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
+ font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
 }
 
 .wrapper{
@@ -14,24 +13,6 @@ body {
 .Demo{
     display: flex;
 }
-
-.Grid {
-    display: flex;
-    flex-flow: row; 
-    flex-wrap: wrap;
-  }
-  .EndText{
-      display: flex;
-  }
-
-
-.Grid--cols-3 > .Grid-cell {
-        flex: 0 0 100%; 
-      }
-      
-.Grid--cols-3 > .Grid-cell{
-          flex: 1;
-      }
 
 .u-textCenter {
         text-align: center;
