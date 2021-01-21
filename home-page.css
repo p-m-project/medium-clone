@@ -31,7 +31,7 @@ body{
 section.homepage-posts{
   grid-row-start: 1;
   grid-column: 1 / span 7;
-  background-color: aquamarine;
+ 
 }
 aside.homepage-sidebar{
   background-color: blueviolet;
@@ -44,8 +44,11 @@ aside.homepage-sidebar{
 }
 .post-section{
   width: 100%;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
   display: flex;
   flex-direction: row;
+  border-bottom: solid 1px rgba(41, 41, 41, .2);
 }
 .post-writer{
   display: flex;
@@ -77,10 +80,10 @@ aside.homepage-sidebar{
   line-height: 20px;
   padding-top: 6px;
   text-align: left;
-  text-overflow: ellipsis;
+  display: -webkit-box;
   -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
   overflow: hidden;
-  /*white-space: nowrap;*/
 }
 .post-description{
   padding-top: 6px;
@@ -92,6 +95,10 @@ aside.homepage-sidebar{
   line-height: 20px;
   color: rgba(117, 117, 117, 1);
   font-weight: normal;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
 }
 .post-option{
   display: flex;
