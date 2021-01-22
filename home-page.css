@@ -90,7 +90,6 @@ section.homepage-posts{
  
 }
 aside.homepage-sidebar{
-  background-color: blueviolet;
   grid-column: 9 / span 4;
   grid-row: 1;
 }
@@ -104,7 +103,7 @@ aside.homepage-sidebar{
   padding-bottom: 50px;
   display: flex;
   flex-direction: row;
-  border-bottom: solid 1px rgba(41, 41, 41, .2);
+  border-bottom: solid 1px rgba(248, 165, 194,.4);
 }
 .post-writer{
   display: flex;
@@ -183,5 +182,49 @@ aside.homepage-sidebar{
   height: 140px;
 }
 
+.sidebar-items{
+  display: block;
+  box-shadow: 0 0 10px rgba(41, 41, 41, .2);
+  border-radius: 10px;
+}
+.sidebar-title{
+  display: block;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1vh 0;
+  background-color: rgba(248, 165, 194,.2);
+}
+.sidebar-title p{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 16px;
+  color:inherit;
+  text-overflow: clip;
+}
+.sidebar-cat{
+  border-bottom: solid 1px #f1f2f6;
+}
+
+.sidebar-cat-list{
+  list-style-type: none;
+}
+.sidebar-cat-list li{
+  padding: 2vh 0;
+}
+.sidebar-footer{
+  padding: 2vh 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content:flex-start;
+}
+.sidebar-footer a{
+  flex-basis:3.5rem;
+  font-weight:400;
+  color: rgba(117, 117, 117, 1);
+}
 
 
