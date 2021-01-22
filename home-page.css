@@ -8,6 +8,62 @@ body{
   max-width: 90vw;
   margin: 0 auto;
 }
+/* ***************************Masoume */
+
+
+.flex-container{
+  display: flex;
+}
+.Demo{
+  display: flex;
+}
+
+.Grid {
+  display: flex;
+  flex-flow: row; 
+  flex-wrap: wrap;
+}
+.EndText{
+    display: flex;
+}
+
+
+.Grid--cols-3 > .Grid-cell {
+      flex: 0 0 100%; 
+    }
+    
+.Grid--cols-3 > .Grid-cell{
+        flex: 1;
+    }
+
+.u-textCenter {
+      text-align: center;
+     }
+
+.medium-text p{
+padding: 1vw;
+font-weight: bold;
+font-size: 2vw;
+color: #ccc;
+}
+.medium-img img{
+width: 1.5vw;
+border-radius: 3vw;
+padding: 1.5vw;
+}
+.mediumn-text-tow p{
+padding: 1vw;
+}
+
+
+
+
+
+
+
+
+/* ***************************Masoume */
+
 .wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5{
   text-align: left;
 }
