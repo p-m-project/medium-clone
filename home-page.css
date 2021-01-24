@@ -79,6 +79,59 @@ padding: 1vw;
        }
 
 
+
+
+.cat-section{
+  width: 100%;
+  padding: 1%;
+  margin: 1%;
+  border-bottom: solid 1px rgba(248, 165, 194,.8);
+}
+.cat-section-title{
+  display: block;
+  padding: 20px;
+  font-size:1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: rgba(41, 41, 41, 1);
+  font-weight: 700;
+
+}
+ .cat-list{
+  list-style-type: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+.cat-list a{
+  padding:15px;
+  margin: 15px 10px;
+  flex-basis:calc(19.98% - 50px ) ;
+}
+.cat-list a div{
+  text-align: center;
+  text-overflow: ellipsis;
+}
+.favorite-writers{
+  margin: 1%;
+  padding: 1%;
+  border-bottom: solid 1px rgba(248, 165, 194,.7);
+}
+
+.homepage-writers-section{
+  width: 100%;
+  padding: 16px 0 6px 0;
+}
+.homepage-writers-section-title {
+  font-size:1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: rgba(41, 41, 41, 1);
+  font-weight: 700;
+}
+
 .homepage-main{
   display: grid;
 
@@ -87,12 +140,25 @@ padding: 1vw;
   .homepage-main{
     grid-template-columns: repeat(12, 1fr);
     gap: 1vh;
+    height: 100vh;
+    overflow-y: hidden;
   }
   section.homepage-posts{
     grid-row-start: 1;
     grid-column: 1 / span 7;
    
   }
+
+  @media screen and (min-width:1023px){
+    .homepage-main{
+      height: 100vh;
+      overflow-y: hidden;
+  }
+
+  section.homepage-posts{
+    overflow-y: scroll;
+  }
+}
   aside.homepage-sidebar{
     grid-column: 9 / span 4;
     grid-row: 1;
@@ -100,7 +166,8 @@ padding: 1vw;
 
   /* anjaaaaaaaaaaaaaaam bedam */
   
-  /*@media screen and (min-width:300px)  and (max-width: 600px){
+  @media screen and  (max-width: 1023px){
+    
     aside.homepage-sidebar{
       display:none;
     }
@@ -115,7 +182,7 @@ padding: 1vw;
   }
   
 }
-*/
+
 
 .posts-container{
  
@@ -123,8 +190,8 @@ padding: 1vw;
 }
 .post-section{
   width: 100%;
-  margin-bottom: 50px;
-  padding-bottom: 50px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: row;
   border-bottom: solid 1px rgba(248, 165, 194,.4);
@@ -141,6 +208,7 @@ padding: 1vw;
   border-radius: 50%;
 
 }
+
 .post-writer-name{
   align-self: center;
   margin-left: 8px;
@@ -156,7 +224,7 @@ padding: 1vw;
 }/* i should work on text-overflow and overflow to control the height */
 .post-title a h2{
   font-size: 1.5em;
-  line-height: 20px;
+  line-height: 1.2em;
   padding-top: 6px;
   text-align: left;
   display: -webkit-box;
@@ -164,8 +232,10 @@ padding: 1vw;
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }
+
 .post-description{
   padding-top: 6px;
+  display: block;
 }
 
 .post-description h3{
@@ -179,6 +249,21 @@ padding: 1vw;
   -webkit-box-orient: vertical;  
   overflow: hidden;
 }
+
+@media screen and (max-width:680px){
+  .post-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+  }
+  .post-title a h2{
+    font-size: 1.1em;
+  }
+
+  .post-description {
+    display: none;
+  }
+}
+
 .post-option{
   display: flex;
   flex-direction: row;
@@ -191,8 +276,6 @@ padding: 1vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-
-
 }
 .seperator{
   padding: 0 6px;
@@ -204,6 +287,34 @@ padding: 1vw;
 .post-picture img{
   width: 200px;
   height: 140px;
+}
+
+@media screen and (max-width:680px){
+
+  .post-picture img{
+    width: 140px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width:475px){
+  .post-picture img{
+    width: 100px;
+    height: 90px;
+  }
+  .post-meta{
+    margin-right: 5px;
+  }
+}
+/* ----------------------*/
+@media screen and (max-width:400px){
+  .post-date-time span{
+    font-size: .8em;
+  }
+  .post-picture img{
+    width: 80px;
+    height: 60px;
+  }
 }
 
 .sidebar-items{
@@ -245,17 +356,26 @@ padding: 1vw;
   transform: translateX(-20px);
   border-right: solid 5px #5a5a5a;
 }
-.sidebar-users{
+.sidebar-writers-section{
   width: 100%;
   padding: 16px 0 6px 0;
   border-bottom: solid 1px #f1f2f6;
+}
+.sidebar-writers-section-title{
+  text-align: center;
+  font-weight: 600;
+  color: rgba(117, 117, 117, 1);
+  padding:0 0 12px 12px;
+}
+
+.sidebar-writers, .homepage-writers{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-content: stretch;
   justify-content: space-around;
 }
-.sidebar-user{
+.sidebar-writer, .homepage-writer{
   flex-basis: 29.32%;
   border: solid 1px rgba(248, 165, 194,.4);
   padding: 1%;
@@ -264,20 +384,24 @@ padding: 1vw;
   justify-content: space-around;
   align-content: center;
 }
-.sidebar-user  div{
+.sidebar-writer  div, .homepage-writer  div{
   margin-bottom: 10px;
+  text-align: center;
 }
-.sidebar-user-follow button{
+.sidebar-writer-follow button, .homepage-writer-follow button{
   margin-bottom: 0;
 }
-.sidebar-user-picture img{
+
+.sidebar-writer-picture img, .homepage-writer-picture img{
   width: 45px;
   height: 45px;
   border-radius: 50%;
-
+  display: block;
+  margin: 0 auto;
 }
 
-.sidebar-user-name{
+
+.sidebar-writer-name, .homepage-writer-name{
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
