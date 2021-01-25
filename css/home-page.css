@@ -47,9 +47,9 @@ font-size: 2vw;
 color: #ccc;
 }
 .favorite-img img{
-width: 1.5vw;
-border-radius: 3vw;
-padding: 1.5vw;
+  width: 3vw;
+  border-radius: 30px;
+  height: 3vw;
 }
 .favorite-text-tow p{
 padding: 1vw;
