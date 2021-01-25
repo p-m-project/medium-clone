@@ -40,18 +40,18 @@ body{
       text-align: center;
      }
 
-.medium-text p{
+.favorite-post p{
 padding: 1vw;
 font-weight: bold;
 font-size: 2vw;
 color: #ccc;
 }
-.medium-img img{
+.favorite-img img{
 width: 1.5vw;
 border-radius: 3vw;
 padding: 1.5vw;
 }
-.mediumn-text-tow p{
+.favorite-text-tow p{
 padding: 1vw;
 }
 
