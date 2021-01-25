@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
-        <title>Sign-in to Medium</title>
+        <title>Sign-up to Medium</title>
         <meta charset="UTF-8">
         <meta name="keyword" content="">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./index.css">
-        <link rel="stylesheet" type="text/css" href="navbar.css">
-        <link rel="stylesheet" type="text/css" href="signup-signin.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="stylesheet" type="text/css" href="../css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="../css/signup-signin.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="nav.js"></script>
-
+        <script src="../js/nav.js"></script>
     </head>
     <body>
+ 
         <div>
             <nav class="nav">
                 <div class="nav-container">
                     <div class="nav-icon">
                         <div class="icon-title">
                             <a href="#" target="_blank" >
-                                <!--  MEDIUM SBU34--> 
-                              <img src="media/MEDIUM-SBU34.svg" alt="MEDIUM-SBU34">
+                              <!--  MEDIUM SBU34--> 
+                              <img src="../media/MEDIUM-SBU34.svg" alt="MEDIUM-SBU34">
                             </a>
                         </div>
                     </div>
-                    <!-- plz add serach input and style the menu -->
+                   
                     <div class="topnav">
                         <a class="active" href="#home">Home</a>
                         <a href="#about">About</a>
                         <a href="#contact">Contact</a>
-
-                        <div class="topnav-sandwich" >
-                            <a onclick="showMenu()">
-                                <span class="fa fa-bars" ></span>
-                            </a>
-                            <div class="topnav-sandwich-links" style="display: none;">
-                                <a class="active" href="#home">Home</a>
-                                <a href="#about">About</a>
-                                <a href="#contact">Contact</a>
+                        
+                        <!-- add this to sin in-->
+                        
+                            <div class="topnav-sandwich" >
+                                <a onclick="showMenu()">
+                                    <span class="fa fa-bars" ></span>
+                                </a>
+                                <div class="topnav-sandwich-links" style="display: none;">
+                                    <a class="active" href="#home">Home</a>
+                                    <a href="#about">About</a>
+                                    <a href="#contact">Contact</a>
+                                </div>
+                                
                             </div>
-                            
-                        </div>
-
+                        <!-- up to there-->
                         <div class="search-container">
                           <form action="/action_page.php">
                             <input type="text" placeholder="Search.." name="search">
                             <button type="submit"><i class="fa fa-search"></i></button>
                           </form>
                         </div>
+                        
                     </div>
+                   
 
                 </div>
             </nav>
@@ -60,26 +64,34 @@
     
                         </div>
                         <div class="signin-form-body">
+
                             <!-- sign in form start-->
+
                             <form method="POST">
+
                                 <div class="form-group">
                                         <input type="text" name="username" class="form-control" placeholder="Enter your Email or Username or Phone number">
                                 </div>
+
                                 <div  class="form-group">
+                                    
                                     <input type="password" name="password" class="form-control" placeholder="Enter your Password">
                                 </div>
-                                <input type="submit" name="Login" class="btn btn-primary  w-100" value="sign in">
+
+                                <div  class="form-group">
+                                    <input type="password" name="password" class="form-control" placeholder="Confirm your Password">
+                                </div>
+
+                                <input type="submit" name="Login" class="btn btn-primary  w-100" value="sign up">
+                                <div class="form-links">
+                                    <div>
+                                        Already registerd? <a href="#">Login</a>
+                                    </div>
+                                    <div>
                             </form>
-                            <div class="form-links">
-                                <div>
-                                    Not Registerd? <a href="#">Register</a>
-                                </div>
-                                <div>
-                                    <a href="#">Forget password</a>
-                                </div>
-                                
-                            </div>
+
                         </div>
+
                     </div>
     
                 </div>
