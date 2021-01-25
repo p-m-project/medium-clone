@@ -324,7 +324,7 @@ padding: 1vw;
   padding: 0 6px;
 }
 .post-save a i.fa-save:link ,.post-save a i.fa-save:visited {
-  color: green;
+  color: rgb(2, 133, 2);
 }
 .post-save a i.fa-save:hover{
   color:black;
