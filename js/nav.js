@@ -9,3 +9,14 @@ function showMenu(){
     }
 
  }
+
+ function showProfileMenu(){
+    if(document.querySelector(".navbar-profile-links").style.display=="none") {
+        document.querySelector(".navbar-profile-links").style.display="block";
+       
+       }
+       else{
+        document.querySelector(".navbar-profile-links").style.display="none";
+       }
+
+ }
