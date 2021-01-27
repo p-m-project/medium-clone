@@ -1,0 +1,189 @@
+.nav{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px rgba(41, 41, 41, .2);
+}
+
+.nav-container{
+    height: 75px;
+    margin: 0 64px;
+    padding: 17px 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-icon .icon-title a{
+    color: black;  
+    text-decoration: none;
+}
+.nav-icon .icon-title a img{
+    max-width: 100%;
+    max-height: 50px;
+}
+
+ /* This code just apply style on the items with class
+ nav-menu-items. The div with nav-menu-items-last 
+ shouldn't have mergin left to avoid conflict with 
+ the left div */
+
+  
+
+  
+
+/*nav test */
+.nav-space{
+    flex-grow: 1;
+  }
+  .nav-links{
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: center;
+    justify-content: space-between;
+  }
+
+
+  .nav-links > a {
+    padding: 12px 0;
+    margin-left: 3px;
+    width: 100px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+  }
+  .nav-links > a.active {
+    background-color: #2196F3;
+    color: white;
+  }
+
+  .nav-links > a:hover {
+    background-color: #ddd;
+    color: black;
+}
+.nav-links > a:active {
+    background-color: #2196F3;
+    color: white;
+}
+.topnav-sandwich{
+    margin-left:3px;
+}
+.topnav-sandwich .fa.fa-bars{
+    font-size: 24px;
+    color:rgba(104, 74, 148, 1);
+}
+
+  .search-container{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+  }
+
+  .nav-container input[type=text] {
+    padding: 6px;
+    font-size: 17px;
+    border: none;
+    transition: border-color 0.15s ease-in-out;
+}
+
+  .nav-links .search-container button {
+    padding: 6px 10px;
+    background: rgba(104, 74, 136, 0.239);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+@media screen and (min-width:1201px) {
+    .topnav-sandwich{
+        display: none;
+     }
+    }
+
+@media screen and  (max-width:1201px){
+    /* .nav-icon{
+         width:30%;
+     }*/
+     .nav-links a{
+         display:none;
+     }
+     .topnav-sandwich{
+         display: block;
+         position: relative;
+     }
+  
+     .topnav-sandwich-links{
+         background-color: whitesmoke;
+         position: absolute;
+         top: calc(2vh+24px);
+         right: 0;
+         z-index: 1;
+     }
+     .topnav-sandwich a{
+         display: block;
+         text-align: center;
+         width: 100%;
+         margin: 0;
+         font-size: large;
+     }
+    .nav-links input[type=text] {
+       border: 1px solid  rgba(248, 165, 194,.5);  
+       border-radius: 5px;
+     }
+ 
+ }
+
+ 
+@media screen and (min-width:538px) and (max-width: 900px) {
+    .nav-container{
+        margin: 0 10px 0  10px;
+    }
+   
+  }
+
+  @media screen and  (min-width:538px) and (max-width:650px){
+  
+  .nav-container input[type=text]{
+        font-size: smaller;
+    }
+  }
+
+  @media screen and (max-width:538px){
+    .nav-container{
+        margin: 0 10px 0  10px;
+    }
+    .nav-icon .icon-title a img {
+        max-width: 100%;
+        max-height: 40px;
+    }
+  }
+
+ @media acreen and (max-width:572px){
+    .nav-icon{
+        max-width: fit-content;
+    }
+ }
+
+ @media screen and (max-width:538px){
+    .nav-container{
+        margin: 0 10px 0  10px;
+    }
+    .nav-links> .search-container{
+        display: none;
+    }
+    
+    .topnav-sandwich .fa.fa-bars{
+        font-size: larger;
+    } 
+  }
+  
+  @media screen and (max-width:500px) {
+    .nav-container{
+        margin: 0 10px;
+    }    
+  }
+
+
+  
