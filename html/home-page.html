@@ -11,44 +11,46 @@
     <script src="../js/nav.js"></script>
 </head>
 <body>
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="nav-icon">
+        <!--navigation of page  when user is --not-- signed in-->
+      <nav class="nav">
+        <nav class="nav-container">
+            <div >            
+                 <div class="nav-icon">
                     <div class="icon-title">
-                        <a href="#" target="_blank" >
-                            <!--  MEDIUM SBU34--> 
-                          <img src="../media/MEDIUM-SBU34.svg" alt="MEDIUM-SBU34">
+                        <!-- this tag always links to the home page-->
+                        <a href="#homepage">
+                            <img src="../media/MEDIUM-SBU34.svg"></div>
                         </a>
                     </div>
-                </div>
-                <!-- plz add serach input and style the menu -->
-                <div class="topnav">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#contact">Contact</a>
-
-                    <div class="topnav-sandwich" >
-                        <a onclick="showMenu()">
-                            <span class="fa fa-bars" ></span>
-                        </a>
-                        <div class="topnav-sandwich-links" style="display: none;">
-                            <a class="active" href="#home">Home</a>
-                            <a href="#about">About</a>
-                            <a href="#contact">Contact</a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="search-container">
-                      <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                      </form>
-                    </div>
-                </div>
-
+               
             </div>
-        </nav>  
+            <div class="nav-space"></div>
+            <div class="nav-links" style="width: fit-content;">
+                <a href="#add-post" class="active">Get Started</a>
+                <a href="#signin">Sign In</a>
+                <a href="#about">About</a>
+                <div class="topnav-sandwich" >
+                    <a onclick="showMenu()">
+                        <span class="fa fa-bars" ></span>
+                    </a>
+                    <div class="topnav-sandwich-links" style="display: none;">
+                        <!-- only the active page -->
+                        <a href="#newpost" class="active">Get Started</a>
+                        <a href="#signin">Sign In</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                </div>
+                <div class="search-container">
+                  <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+                </div>
+            </div>
+        </nav>
+     </nav>
       
     <div class="wrapper">
  
