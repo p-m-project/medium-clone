@@ -20,6 +20,8 @@ a{
 }
 button, input {
   overflow: visible;
+  outline: none;
+  border: none;
 }
 
 button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disabled), [type="submit"]:not(:disabled) {
