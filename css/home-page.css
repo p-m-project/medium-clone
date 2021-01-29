@@ -74,10 +74,12 @@ font-size: 1.1em;
   font-size: 1.1em;
 }
 
+.favarid-post-main{
+flex-direction: column;
+border-bottom: 1px solid;
+padding-bottom: 3vw;
 
-
-
-
+}
 
 
 
