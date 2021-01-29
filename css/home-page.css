@@ -43,7 +43,7 @@ body{
 .favorite-post p{
 padding: 1vw;
 font-weight: bold;
-font-size: 2vw;
+font-size: 2em;
 color: #ccc;
 }
 .favorite-img img{
@@ -54,6 +54,7 @@ color: #ccc;
 
 .favorite-text-tow p{
 padding: 1vw;
+font-size: 1.1em;
 }
 
 .favarite-post-tow{
@@ -65,10 +66,12 @@ padding: 1vw;
   padding-right: 4vw;
   padding-top: 0.5vw;
   font-weight: bold;
+  font-size: 1.1em;
 }
 .favarite-post-EndText p{
   padding-left: 5vw;
   padding-top: .5vw;
+  font-size: 1.1em;
 }
 
 
