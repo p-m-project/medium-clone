@@ -68,18 +68,6 @@ font-size: 1.1em;
   font-weight: bold;
   font-size: 1.1em;
 }
-.favarite-post-EndText p{
-  padding-left: 5vw;
-  padding-top: .5vw;
-  font-size: 1.1em;
-}
-
-.favarid-post-main{
-flex-direction: column;
-border-bottom: 1px solid;
-padding-bottom: 3vw;
-
-}
 
 
 
@@ -112,7 +100,7 @@ padding-bottom: 3vw;
 }
 
 .favorite-post-number span{
-  font-size: 1.5em;
+  font-size: 2.5em;
   font-weight: bold;
   color: #ccc;
 }
@@ -148,6 +136,13 @@ padding-bottom: 3vw;
   display: grid;  
   grid-gap: 5px;  
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 66px); 
+}
+
+.favorite-post-one-tow{
+  display: grid;  
+  grid-gap: 5px;  
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-template-rows: repeat(2, 100px); 
 }
 
@@ -162,20 +157,8 @@ padding-bottom: 3vw;
 
 
 
-.wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5{
-  text-align: left;
-}
-.flex-container{
-    display: flex;
-}
-.Demo{
-    display: flex;
-}
 
-.u-textCenter {
-        text-align: center;
-        padding: 1vw 0;
-       }
+
 
 
  /*styles of the two writers and categories section which will be apeared when sidebar dispeared*/
