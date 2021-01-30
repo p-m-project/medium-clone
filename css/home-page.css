@@ -86,11 +86,36 @@ padding-bottom: 3vw;
 /* ***************************Masoume */
 .favorite-post{
     flex-direction: column;
+    display: flex;
 }
 
 .favorite-post-title{
     border-top: 1px solid rgba(230, 230, 230, 1);
+    display: block;
 }
+
+.favorite-post-there-part{
+  padding-top: 40px;
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.favorite-post-title-main{
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+
+}
+
+.favorite-post-text-line p{
+  font-size: 1em;
+  color: #000;
+}
+
+
+
+
+
 
 
 .wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5{
