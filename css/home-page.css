@@ -84,6 +84,14 @@ padding-bottom: 3vw;
 
 
 /* ***************************Masoume */
+.favorite-post{
+    flex-direction: column;
+}
+
+.favorite-post-title{
+    border-top: 1px solid rgba(230, 230, 230, 1);
+}
+
 
 .wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5{
   text-align: left;
