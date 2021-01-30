@@ -117,11 +117,21 @@ padding-bottom: 3vw;
   color: #ccc;
 }
 
+.favorite-post-texts-image{
+  display: -webkit-inline-box;
+}
+
 .favorite-post-texts-image a img{
   width: 20px;
   height: 20px;
   border-radius: 50px;
   margin-left: 1em;
+}
+
+.favorite-post-line-text p{
+    margin-left: 1em;
+    font-size: 1em;
+    padding-top: .20em;
 }
 
 
