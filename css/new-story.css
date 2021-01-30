@@ -1,0 +1,17 @@
+.new-post-container{
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
+}
+
+/* styles of p tags classes in new post section*/
+.new-post-passage{
+    font-size: 21px;
+    line-height:1.58;
+    font-weight: 400;
+    overflow: visible;
+    margin-bottom: 21px;
+
+}
+
+/*end of  p tags classes in new post section*/
