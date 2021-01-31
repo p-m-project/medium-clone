@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     border-bottom: solid 1px rgba(41, 41, 41, .2);
+    margin-bottom: 64px;
 }
 
 .nav-container{
@@ -281,6 +282,29 @@
         margin: 0 10px;
     }    
   }
+  /* ****************************************Masoume */
+  .storeis-title{
+    padding-right: 64px;
+    padding-left: 64px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 64px;
+    display: block;
+  }
+
+  .stories-menu{
+      background-color: #fff;
+      color: #000;
+      border-bottom: 1px solid rgba(230, 230, 230, 1);
+  }
+
+.storeis-text{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    align-content: center;
+}
 
 
 
