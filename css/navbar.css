@@ -291,11 +291,16 @@
     padding-bottom: 64px;
     display: block;
   }
+
   .stories-menu{
       background-color: #fff;
       color: #000;
+      border-bottom: 1px solid rgba(230, 230, 230, 1);
   }
 
+.storeis-text{
+    display: flex;
+}
 
 
   
