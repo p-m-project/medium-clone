@@ -3,14 +3,32 @@
     margin: 0 auto;
     padding: 20px 20px 0 20px;
 }
+.new-post-container .new-post-passage, .new-post-container .new-post-title{
+    border:solid 1px hotpink;
+}
 
 /* styles of p tags classes in new post section*/
-.new-post-passage{
+.new-post-title{
+    font-size: 42px;
+    line-height:1.58;
+    font-weight: 400;
+    overflow: visible;
+    margin-bottom: 21px;
+}
+.new-post-passage {
     font-size: 21px;
     line-height:1.58;
     font-weight: 400;
     overflow: visible;
     margin-bottom: 21px;
+
+}
+
+.new-post-passage:nth-child(){
+    font-size: 21px;
+    line-height:1.58;
+    font-weight: 400;
+    overflow: visible;
 
 }
 
