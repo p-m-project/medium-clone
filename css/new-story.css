@@ -24,10 +24,10 @@
 
 }
 
-.new-post-passage:nth-child(){
+.new-post-passage b, .new-post-passage div, .new-post-passage i, .new-post-passage p{
+    display: inline-block;
     font-size: 21px;
     line-height:1.58;
-    font-weight: 400;
     overflow: visible;
 
 }

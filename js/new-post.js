@@ -1,7 +1,5 @@
 
-/*function setClass(){
-    document.querySelector(".new-post-container").childNodes.setAttribute("class",".new-post-passage");
-}*/
+
 function nextElem(er){
     er.addEventListener("keydown",(e)=>{      
         if(e.keyCode===13){
@@ -28,37 +26,118 @@ function nextElem(er){
             
             }          
 }*/
-
-function nextElem2(ka){
-    ka.addEventListener("keydown", (e)=>
+function nextElem3(ka){
+    ka.addEventListener("keydown", (e1)=>
     {
-        if(e.keyCode===13){
+        
+        if(e1.shiftKey){
+            if( e1.keyCode===13)
+            document.execCommand('insertHTML', false, '<br/>');
+            return false;
+        }
+     
+        if(e1.keyCode===13){
             //create a global p element:
             if(ka.nextElementSibling){
                 ka.nextElementSibling.focus();
             }
+          
             else{
-                let pElement= document.createElement("div");
-                pElement.setAttribute("contenteditable", "true");
+                let pElement= document.createElement("p");
                 pElement.setAttribute("class", "new-post-passage");
-                pElement.setAttribute("onfocus", "nextElem2(this)");
+                pElement.setAttribute("contenteditable", "true");
+                pElement.setAttribute("onfocus", "nextElem3(this)");
+                document.querySelector(".new-post-container").appendChild(pElement).focus();  
+            }          
+           // addClassF();
+        } 
+        if(e1.keyCode===8 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===8){
+            ka.remove()         
+        }
+
+       /* switch(e1.keyCode){
+            case 13:if(ka.nextElementSibling){
+                    ka.nextElementSibling.focus();
+                }
+            
+                else{
+                    let pElement= document.createElement("p");
+                    pElement.setAttribute("contenteditable", "true");
+                    pElement.setAttribute("class", "new-post-passage");
+                    pElement.setAttribute("onfocus", "nextElem3(this)");
+                    document.querySelector(".new-post-container").appendChild(pElement).focus();  
+                } 
+            case 8:    if(ka.innerHTML===""){
+                ka.remove()
+               }
+        }*/
+
+       /* if(e1.keyCode===13){
+            //create a global p element:
+            if(ka.nextElementSibling){
+                ka.nextElementSibling.focus();
+            }
+          
+            else{
+                let pElement= document.createElement("p");
+                pElement.setAttribute("class", "new-post-passage");
+                pElement.setAttribute("contenteditable", "true");
+                pElement.setAttribute("onfocus", "nextElem3(this)");
                 document.querySelector(".new-post-container").appendChild(pElement).focus();  
             }          
            // addClassF();
         } 
 
-        if(e.keyCode===8){
-            //create a global p element:
-           if(ka.innerHTML===""){
-            ka.remove()
-           }
+        else {
+            if(e1.keyCode===8){
+                //create a global p element:
+               if(ka.innerHTML===""){
+                ka.remove()
+               }
+            }
+       
            
            // addClassF();
-        } 
+        } */
+
+        
     })
     
 
 }
+
+function nextElem2(k1){
+    k1.addEventListener("keydown", (e)=>
+    {
+       if(e.shiftKey){
+            if( e.keyCode===13)
+            document.execCommand('insertHTML', false, '<br/>');
+            return false;
+        }
+       
+
+        if(e.keyCode===13){
+            //create a global p element:
+            if(k1.nextElementSibling){
+                k1.nextElementSibling.focus();
+
+            }
+            else{
+                let pElement= document.createElement("p");
+                pElement.setAttribute("contenteditable", "true");
+                pElement.setAttribute("class", "new-post-passage");
+                pElement.setAttribute("onfocus", "nextElem3(this)");
+                document.querySelector(".new-post-container").appendChild(pElement).focus();  
+
+            }          
+           // addClassF();
+        } 
+        
+    })
+    
+
+}
+
 
 
 
