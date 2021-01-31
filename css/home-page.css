@@ -8,33 +8,115 @@ body{
   max-width: 90vw;
   margin: 0 auto;
 }
+
+.homepage-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height:400px;
+  background-color: indigo;
+  align-content: center;
+}
+.homepage-header-container{
+  min-width: 250px;
+  max-width: 550px;
+  margin: 0 auto;
+  height: 400px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.homepage-header-container h1{
+  font-size: 50px;
+  color: #f1f2f6;
+  text-transform: uppercase;
+  line-height: 2em;
+}
+
+.homepage-header-container button{
+  max-width: 250px;
+  margin: 0 auto;
+
+}
+
+/*favorite posts teeeest start */
+.favorite-posts-section-title{
+  display: block;
+  padding: 4% 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  color: rgba(41, 41, 41, 1);
+  font-weight: 700;
+}
+
+
+.favorite-posts-section{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+    margin: 0 0 4% 0;
+    border-bottom: solid 1px rgba(248, 165, 194,.8);
+  
+}
+
+.favorite-post-cell{
+  flex-basis: 33%;
+  margin-bottom: 4%;
+  display: flex;
+  flex-flow: row nowrap;
+
+}
+
+.favorite-post-there-part{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 1.5em;
+}
+
+@media screen and (min-width:768px) and (max-width:1073px){
+.favorite-post-cell{
+  flex-basis: 49.99%;
+}
+
+}
+
+@media screen and (max-width:767px){
+  .favorite-posts-section{
+    display: block;
+  }
+  .favorite-post-cell{
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:400px){
+  .favorite-posts-section-title{
+    padding: 8% 0;
+  }
+  .favorite-post-cell{
+    margin-bottom: 12%;
+  }
+}
+
+
+
+/*favorite posts teeest end */
+
 /* ***************************Masoume */
 
 
 .flex-container{
   display: flex;
 }
-.Demo{
-  display: flex;
-}
 
-.Grid {
-  display: flex;
-  flex-flow: row; 
-  flex-wrap: wrap;
-}
 .EndText{
     display: flex;
 }
-
-
-.Grid--cols-3 > .Grid-cell {
-      flex: 0 0 100%; 
-    }
-    
-.Grid--cols-3 > .Grid-cell{
-        flex: 1;
-    }
 
 .textCenter {
       text-align: center;
@@ -68,37 +150,86 @@ font-size: 1.1em;
   font-weight: bold;
   font-size: 1.1em;
 }
-.favarite-post-EndText p{
-  padding-left: 5vw;
-  padding-top: .5vw;
-  font-size: 1.1em;
-}
-
-.favarid-post-main{
-flex-direction: column;
-border-bottom: 1px solid;
-padding-bottom: 3vw;
-
-}
 
 
 
 /* ***************************Masoume */
 
-.wrapper p, .wrapper h1, .wrapper h2, .wrapper h3, .wrapper h4, .wrapper h5{
-  text-align: left;
-}
-.flex-container{
-    display: flex;
-}
-.Demo{
-    display: flex;
+.favorite-post-title{
+    border-top: 1px solid rgba(230, 230, 230, 1);
+    display: block;
 }
 
-.u-textCenter {
-        text-align: center;
-        padding: 1vw 0;
-       }
+.favorite-post-there-part{
+  padding-bottom: 16px;
+  display: flex;
+}
+
+.favorite-post-title-main{
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+
+}
+
+.favorite-post-text-line p{
+  font-size: 1em;
+  color: #000;
+}
+
+.favorite-post-number span{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.favorite-post-texts-image{
+  display: -webkit-inline-box;
+}
+
+.favorite-post-texts-image a img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+}
+
+
+.favorite-post-line-text p{
+    margin-left: 1em;
+    font-size: 1em;
+    padding-top: .20em;
+}
+
+.favorite-post-tow-line h2{
+  margin-left: 1.5em;
+  line-height: 2em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+
+}
+
+.favorite-post-tow-line p{
+  margin-left: 1.5em;
+  margin-top: 1em;
+}
+
+.favorite-post-one{
+  display: grid;  
+  grid-gap: 5px;  
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 66px); 
+}
+
+.favorite-post-one-tow{
+  display: grid;  
+  grid-gap: 5px;  
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(2, 100px); 
+}
+
+
 
 
  /*styles of the two writers and categories section which will be apeared when sidebar dispeared*/
@@ -179,7 +310,6 @@ padding-bottom: 3vw;
   .homepage-main{
     grid-template-columns: repeat(12, 1fr);
     gap: 1vh;
-    height: 100vh;
     overflow-y: hidden;
   }
   section.homepage-posts{
@@ -222,7 +352,6 @@ padding-bottom: 3vw;
     grid-row: 1;
   }
 
-  /* anjaaaaaaaaaaaaaaam bedam */
   
   @media screen and  (max-width: 1023px){
     
@@ -309,6 +438,7 @@ padding-bottom: 3vw;
   line-height: 20px;
   color: rgba(117, 117, 117, 1);
   font-weight: normal;
+  text-align: left;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;  

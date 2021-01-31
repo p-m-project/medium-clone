@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/home-page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="../js/nav.js"></script>
 </head>
 <body>
         <!--navigation of page  when user is --not-- signed in-->
@@ -56,223 +55,191 @@
  
         <!--MASOUMEH start::::::::: -->
 
-        <header>
-            <!--style and add background picture later-->
+        <header class="homepage-header">
+            <!--style and  background picture later-->
+            <div class="homepage-header-container">
+                <h1>test header</h1>
+                <!--this section links to add a new post-->
+                <button type="button" class="btn btn-primary">
+                    Post something
+                </button>
+            </div>
 
-            <!--this section links to add a new post-->
-            <button type="button" class="btn btn-primary">
-                Post something
-            </button>
+            
 
         </header>
-
-        <div class="favorite-posts flex-container">
-            <!--specify the class names related to the div. plz define a class for favorite-posts-->
-            <img src="https://img.icons8.com/metro/26/000000/pin-2.png"/>
-            <h1>Basic Grid</h1>
-        </div>
-        
-        <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-
-                      <div class="Demo content-1of3">
-                          <div class="favorite-post">
-                            <p>01</p>
-                          </div>
-
-                          <div class="favorite-img">
-                            <img src="../media/post2.jpg" alt="Nature" class="responsive">
-                          </div>
-
-                          <div class="favorite-text-tow">
-                            <p>Masoume Vsl</p>
-                          </div>
-                      </div>
-
-                      <div class="favarite-post-tow">
-                          <p>Our Journey to uPostgreSQL 12</p>
-                      </div>
-
-                      <div class="favarite-post-EndText">
-                        <p>jan 26 . 6 min read</p>
-                      </div>
-
-                   </div>
+        <!--favorite post test-->
+        <dic class="favorite-posts-section-title">
+            categories you might be interested in
+        </dic>
+        <div class="favorite-posts-section">
+            <div class="favorite-post-cell">
+                <div class="favorite-post-number">
+                    <span>01</span>
                 </div>
-            </div> 
-
-
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-
-                      <div class="Demo content-1of3">
-                          <div class="favorite-post">
-                            <p>02</p>
-                          </div>
-
-                          <div class="favorite-img">
-                            <img src="../media/post3.jpg" alt="Nature" class="responsive">
-                          </div>
-
-                          <div class="favorite-text-tow">
-                            <p>Mahan yally</p>
-                          </div>
-                      </div>
-
-                      <div class="favarite-post-tow">
-                          <p>Our Journey to PostgreSQL 42</p>
-                      </div>
-
-                      <div class="favarite-post-EndText">
-                        <p>jan 26 . 6 min read</p>
-                      </div>
-
-                   </div>
+                <div class="favorite-post-content">
+                    <div class="favorite-post-there-part">
+                    
+                        <div class="favorite-post-texts-image">
+                            <div class="favorite-post-image">
+                                <a><img src="../media/post4.jpg" alt="Nature" class="responsive"></a>
+                            </div>
+                            <div class="favorite-post-line-text">
+                                <p>Masoume Vsl</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="favorite-post-tow-line">
+                        <a href="#article">
+                            <h2>Our Journey Lorem ipsum dolotur adipiscing elit to uPost</h2>
+                        </a>
+                        <p>jan 29 oo</p>
+                    </div>
                 </div>
-            </div> 
-
-
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-
-                      <div class="Demo content-1of3">
-                          <div class="favorite-post">
-                            <p>03</p>
-                          </div>
-
-                          <div class="favorite-img">
-                            <img src="../media/profile1.jpg" alt="Nature" class="responsive">
-                          </div>
-
-                          <div class="favorite-text-tow">
-                            <p>Mryam MM</p>
-                          </div>
-                      </div>
-
-                      <div class="favarite-post-tow">
-                          <p>Our Journey to PostgreSQL 52</p>
-                      </div>
-
-                      <div class="favarite-post-EndText">
-                        <p>jan 26 . 6 min read</p>
-                      </div>
-
-                   </div>
+                
+            </div>
+            <div class="favorite-post-cell">
+                <div class="favorite-post-number">
+                    <span>02</span>
                 </div>
-            </div> 
-
-
-
-        </div>
-
-
-        <div class="Grid Grid--gutters Grid--cols-3 u-textCenter">
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-
-                      <div class="Demo content-1of3">
-                          <div class="favorite-post">
-                            <p>04</p>
-                          </div>
-
-                          <div class="favorite-img">
-                            <img src="../media/user2.jpg" alt="Nature" class="responsive">
-                          </div>
-
-                          <div class="favorite-text-tow">
-                            <p>Lela KJ</p>
-                          </div>
-                      </div>
-
-                      <div class="favarite-post-tow">
-                          <p>Our Journey to PostgreSQL 55</p>
-                      </div>
-
-                      <div class="favarite-post-EndText">
-                        <p>jan 26 . 6 min read</p>
-                      </div>
-
-                   </div>
+                <div class="favorite-post-content">
+                    <div class="favorite-post-there-part">
+                    
+                        <div class="favorite-post-texts-image">
+                            <div class="favorite-post-image">
+                                <a><img src="../media/post4.jpg" alt="Nature" class="responsive"></a>
+                            </div>
+                            <div class="favorite-post-line-text">
+                                <p>Parastoo alirezazadeh</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="favorite-post-tow-line">
+                        <a href="#article">
+                            <h2>Our Journey Lorem ipsum dolor sit amet, consectetur adipiscing elit to uPost</h2>
+                        </a>
+                        <p>jan 29 oo</p>
+                    </div>
                 </div>
-            </div> 
-
-
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-
-                      <div class="Demo content-1of3">
-                          <div class="favorite-post">
-                            <p>05</p>
-                          </div>
-
-                          <div class="favorite-img">
-                            <img src="../media/user5.jpg" alt="Nature" class="responsive">
-                          </div>
-
-                          <div class="favorite-text-tow">
-                            <p>Ali pas</p>
-                          </div>
-                      </div>
-
-                      <div class="favarite-post-tow">
-                          <p>Our Journey to PostgreSQL 82</p>
-                      </div>
-
-                      <div class="favarite-post-EndText">
-                        <p>jan 26 . 6 min read</p>
-                      </div>
-
-                   </div>
+                
+            </div>
+            <div class="favorite-post-cell">
+                <div class="favorite-post-number">
+                    <span>03</span>
                 </div>
-            </div> 
-
-
-            <div class="Grid-cell">
-                <div class="Demo content-1of3">
-                  <div class="Grid-cell">
-
-                      <div class="Demo content-1of3">
-                          <div class="favorite-post">
-                            <p>06</p>
-                          </div>
-
-                          <div class="favorite-img">
-                            <img src="../media/user7.jpg" alt="Nature" class="responsive">
-                          </div>
-
-                          <div class="favorite-text-tow">
-                            <p>Ko Pa</p>
-                          </div>
-                      </div>
-
-                      <div class="favarite-post-tow">
-                          <p>Our Journey to PostgreSQL 42</p>
-                      </div>
-
-                      <div class="favarite-post-EndText">
-                        <p>jan 26 . 6 min read</p>
-                      </div>
-
-                   </div>
+                <div class="favorite-post-content">
+                    <div class="favorite-post-there-part">
+                    
+                        <div class="favorite-post-texts-image">
+                            <div class="favorite-post-image">
+                                <a><img src="../media/post4.jpg" alt="Nature" class="responsive"></a>
+                            </div>
+                            <div class="favorite-post-line-text">
+                                <p>Adeleh maleki</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="favorite-post-tow-line">
+                        <a href="#article">
+                            <h2>Our Journey Lorem ipsum dolor sit amet, consectetur adipiscing elit to uPost</h2>
+                        </a>
+                        <p>jan 29 oo</p>
+                    </div>
                 </div>
-            </div> 
+                
+            </div>
+            <div class="favorite-post-cell">
+                <div class="favorite-post-number">
+                    <span>04</span>
+                </div>
+                <div class="favorite-post-content">
+                    <div class="favorite-post-there-part">
+                    
+                        <div class="favorite-post-texts-image">
+                            <div class="favorite-post-image">
+                                <a><img src="../media/post4.jpg" alt="Nature" class="responsive"></a>
+                            </div>
+                            <div class="favorite-post-line-text">
+                                <p>Tayebe mohebi</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="favorite-post-tow-line">
+                        <a href="#article">
+                            <h2>Our Journey Lorem ipsum dolor sit amet, consectetur adipiscing elit to uPost</h2>
+                        </a>
+                        <p>jan 29 oo</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="favorite-post-cell">
+                <div class="favorite-post-number">
+                    <span>05</span>
+                </div>
+                <div class="favorite-post-content">
+                    <div class="favorite-post-there-part">
+                    
+                        <div class="favorite-post-texts-image">
+                            <div class="favorite-post-image">
+                                <a><img src="../media/post4.jpg" alt="Nature" class="responsive"></a>
+                            </div>
+                            <div class="favorite-post-line-text">
+                                <p>fatemeh ahmadi</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="favorite-post-tow-line">
+                        <a href="#article">
+                            <h2>Our Journey Lorem ipsum dolor sit amet, consectetur adipiscing elit to uPost</h2>
+                        </a>
+                        <p>jan 29 oo</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="favorite-post-cell">
+                <div class="favorite-post-number">
+                    <span>06</span>
+                </div>
+                <div class="favorite-post-content">
+                    <div class="favorite-post-there-part">
+                    
+                        <div class="favorite-post-texts-image">
+                            <div class="favorite-post-image">
+                                <a><img src="../media/post4.jpg" alt="Nature" class="responsive"></a>
+                            </div>
+                            <div class="favorite-post-line-text">
+                                <p>hasti golriz zadeh</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="favorite-post-tow-line">
+                        <a href="#article">
+                            <h2>Our Journey Lorem ipsum dolor sit amet, consectetur adipiscing elit to uPost</h2>
+                        </a>
+                        <p>jan 29 oo</p>
+                    </div>
+                </div>
+                
+            </div>
 
-
-
+            
         </div>
 
-        <div class="favarid-post-main"></div>
-        <!--
+    
+      
 
-            padding: 4% 0;
-    margin: 4% 0;
-        -->
+
+        <!--favorit post test end-->
+      
+
         
         <!--PARASTOO start::::::::: -->
          <div class="cat-section">
@@ -789,6 +756,7 @@
         </div>
     </div>
 
+    <script src="../js/nav.js"></script>
 
 </body>
 </html>   
