@@ -14,8 +14,11 @@
     <script src="../js/nav.js"></script>  
     <script src="../js/new-post.js" defer></script>
 </head>
-<body>
+<body onresize="getDimension()">
     <div>
+        <div class="button-add" style="top: 0; display: none;left: 0;">
+            <i class="fa fa-plus"></i>
+        </div>
         <nav class="nav-signin">
             <nav class="nav-container">
                 <div >
