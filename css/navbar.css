@@ -305,6 +305,10 @@
     padding-top: 40px;
     align-content: center;
 }
+.storeis-text h1{
+    font-weight: 800;
+    margin-bottom: .5em;
+}
 
 .storeis-tow-menu{
     display: flex;
@@ -341,6 +345,7 @@
     display: inline-block;
     font-weight: 400;
 }
+
 
 
 
