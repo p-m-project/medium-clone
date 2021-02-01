@@ -283,8 +283,8 @@
   }
   /* ****************************************Masoume */
   .storeis-title{
-    padding-right: 64px;
-    padding-left: 64px;
+    padding-right: 7em;
+    padding-left: 7em;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 64px;
@@ -347,11 +347,15 @@
 }
 
 .storeis-menu-right a p{
-    font-size: 1em;
+    font-size: 11px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 7px;
 }
 
 .storeis-menu-right-tow a p{
-    font-size: 1em;
+    font-size: 11px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 7px;
 }
 
 .stories-container{
@@ -366,6 +370,16 @@
 }
 
 
+@media screen and (min-width:375px) {
+    .storeis-title{
+        padding-left: 3em;
+    }    
+  }
 
+@media screen and (min-width:1024px) {
+    .storeis-title{
+        padding-left: 7em;
+    }    
+  }
 
   
