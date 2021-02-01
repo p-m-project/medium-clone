@@ -119,8 +119,17 @@ function loadImage(img){
     var txt = document.getElementById('txt');
     /* */
     /* */
-    var imageElement = document.createElement('img')
-    txt.parentNode.insertBefore(imageElement,txt.nextSibling )
+    var imageElement = document.createElement('img');
+    imageElement.style.maxWidth="684px";
+    imageElement.style.display="flex";
+    imageElement.style.alignSelf="center";
+    imageElement.style.marginBottom="21px";
+    txt.parentNode.insertBefore(imageElement,txt.nextSibling );
+    let pElement= document.createElement("p");
+    pElement.setAttribute("contenteditable", "true");
+    pElement.setAttribute("class", "new-post-passage");
+    pElement.setAttribute("onfocus", "nextElem2(this)");
+    imageElement.parentNode.insertBefore(pElement,imageElement.nextSibling );
     imageElement.src = URL.createObjectURL(img.target.files[0]);
     imageElement.onload = function() {
     URL.revokeObjectURL(imageElement.src) 
