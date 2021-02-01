@@ -15,10 +15,33 @@
     <script src="../js/new-post.js" defer></script>
 </head>
 <body onresize="getDimension()">
-    <div>
-        <div class="button-add" style="top: 0; display: none;left: 0;">
-            <i class="fa fa-plus"></i>
+    <div class="button-add-section" style="top: 0; display: none;left: 0;">
+        <a href="#add" >
+            <i class="fa fa-plus" onclick="toggleAddMedia()"></i>
+        </a>
+        <div class="add-media-section" style="display:none;">
+            
+            <a href="#">
+                <label for="img-input">
+                <i class="fa fa-image">
+                </i>
+                <input type="file" id="img-input" name="img" accept="image/png, image/jpeg" class="hidden" onchange="loadImage(event)" >
+                </label>
+            </a>
+            <a href="#">
+                <label for="video-input">
+                <i class="fa fa-video-camera">
+                </i>
+                <input type="file" id="video-input" name="video" accept="video/mp4, video/mpeg, video/mkv, video/mov, video/wmv" class="hidden" >
+                </label>
+            </a>
+
+            
         </div>
+    </div>
+
+    <div>
+        
         <nav class="nav-signin">
             <nav class="nav-container">
                 <div >
@@ -75,7 +98,21 @@
 
                -->  
                <h3 class="new-post-title" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></h3>
-               <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true"></p>
+               <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true" id="txt"></p>
+              <!--
+                  <input type="file" accept="image/*" onchange="loadFile(event)">
+                <img id="output"/>
+                <script>
+                var loadFile = function(event) {
+                    var output = document.getElementById('output');
+                    output.src = URL.createObjectURL(event.target.files[0]);
+                    output.onload = function() {
+                    URL.revokeObjectURL(output.src) // free memory
+                    }
+                };
+                </script>
+              -->
+               
 
               <!--
                  <p id="test" class="new-post-passage" contenteditable="true" onkeydown="removeDiv(event)"  contenteditable="true"></p>
