@@ -354,6 +354,13 @@
     font-size: 1em;
 }
 
+.stories-container{
+    display: block;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    text-align: center;
+}
+
 
 
 
