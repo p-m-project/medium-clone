@@ -41,8 +41,8 @@
     </div>
 
     <div>
-        
-        <nav class="nav-signin">
+        <!--this navigation bar is different with the other navigations-->
+        <nav class="nav-signin nav-newpost">
             <nav class="nav-container">
                 <div >
                  
@@ -81,10 +81,19 @@
                         </div>
                         
                     </div>
-                    <div class="search-container">
-                      <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
+                    <div>
+                      <form class="nav-btns" action="" >
+                      <!-- 
+                          <input type="text" placeholder="Search.." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>
+
+                      --> 
+                        <button type="button" class="btn btn-primary">
+                            <a href="#stories-page">
+                                Publish
+                            </a>
+                            </button>
+                        <button type="button" class="btn btn-follow save-btn" >Save</button>
                       </form>
                     </div>
                 </div>
@@ -92,11 +101,9 @@
         </nav>
         <div class="main">
             <div class="new-post-container">
-               <!--
-                   <p class="new-post-passage" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></p>
-               
-
-               -->  
+               <div class="save-post-text">
+                   <span id="save-post-txt" class="save-post-text-span fa fa-check-circle" style="color: indianred;"> not saved yet</span>
+               </div> 
                <h3 class="new-post-title" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></h3>
                <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true" id="txt"></p>                   
             </div>

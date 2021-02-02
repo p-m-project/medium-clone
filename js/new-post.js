@@ -122,7 +122,8 @@ function loadImage(img){
     var txt = document.getElementById('txt');
     /*create a img tag in order to put uploaded img into it */
     var imageElement = document.createElement('img');
-    imageElement.style.maxWidth="684px";
+    imageElement.style.maxWidth="100%";
+    imageElement.style.height="auto";   
     imageElement.style.marginBottom="21px";
     imageElement.style.cursor="pointer";
     imageElement.setAttribute("contenteditable","true");
@@ -145,7 +146,8 @@ function loadVideo(video){
     var txt = document.getElementById('txt');
     /*create a video tag in order to put uploaded video into it */
     var videoElement = document.createElement('video');
-    videoElement.style.maxWidth="684px";
+    videoElement.style.maxWidth="100%";
+    videoElement.style.height="auto";
     videoElement.style.marginBottom="21px";
     videoElement.style.cursor="pointer";
     videoElement.setAttribute("contenteditable","true");
@@ -164,3 +166,16 @@ function loadVideo(video){
     } 
 }
 
+document.querySelector('.save-btn').addEventListener("click", ()=>
+{
+    let getSaveSpan=document.getElementById("save-post-txt");
+  getSaveSpan.style.color="green";
+  getSaveSpan.style.transition="transform .5s ease-in-out";
+  getSaveSpan.style.transform="scale(1.3)"
+  setTimeout(function(){
+    getSaveSpan.style.transform="scale(1)";
+  },500)
+  
+  getSaveSpan.innerHTML=" saved";
+}
+)
