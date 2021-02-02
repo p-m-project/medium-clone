@@ -14,9 +14,35 @@
     <script src="../js/nav.js"></script>  
     <script src="../js/new-post.js" defer></script>
 </head>
-<body>
+<body onresize="getDimension()">
+    <div class="button-add-section" style="top: 0; display: none;left: 0;">
+        <a href="#add" >
+            <i class="fa fa-plus" onclick="toggleAddMedia()"></i>
+        </a>
+        <div class="add-media-section" style="display:none;">
+            
+            <a href="#">
+                <label for="img-input">
+                <i class="fa fa-image">
+                </i>
+                <input type="file" id="img-input" name="img" accept="image/png, image/jpeg" class="hidden" onchange="loadImage(event)" >
+                </label>
+            </a>
+            <a href="#">
+                <label for="video-input">
+                <i class="fa fa-video-camera">
+                </i>
+                <input type="file" id="video-input" name="video" accept="video/*" class="hidden" onchange="loadVideo(event)" >
+                </label>
+            </a>
+
+            
+        </div>
+    </div>
+
     <div>
-        <nav class="nav-signin">
+        <!--this navigation bar is different with the other navigations-->
+        <nav class="nav-signin nav-newpost">
             <nav class="nav-container">
                 <div >
                  
@@ -55,10 +81,19 @@
                         </div>
                         
                     </div>
-                    <div class="search-container">
-                      <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search">
+                    <div>
+                      <form class="nav-btns" action="" >
+                      <!-- 
+                          <input type="text" placeholder="Search.." name="search">
                         <button type="submit"><i class="fa fa-search"></i></button>
+
+                      --> 
+                        <button type="button" class="btn btn-primary">
+                            <a href="#stories-page">
+                                Publish
+                            </a>
+                            </button>
+                        <button type="button" class="btn btn-follow save-btn" >Save</button>
                       </form>
                     </div>
                 </div>
@@ -66,18 +101,11 @@
         </nav>
         <div class="main">
             <div class="new-post-container">
-               <!--
-                   <p class="new-post-passage" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></p>
-               
-
-               -->  
+               <div class="save-post-text">
+                   <span id="save-post-txt" class="save-post-text-span fa fa-check-circle" style="color: indianred;"> not saved yet</span>
+               </div> 
                <h3 class="new-post-title" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></h3>
-               <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true"></p>
-
-              <!--
-                 <p id="test" class="new-post-passage" contenteditable="true" onkeydown="removeDiv(event)"  contenteditable="true"></p>
-                --> 
-                   
+               <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true" id="txt"></p>                   
             </div>
         </div>
 

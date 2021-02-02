@@ -1,4 +1,12 @@
+let btnAdd=document.querySelector(".button-add-section");
 
+/*this function get dimension of the page in order to set the left value of emlement with class .button-add-section  */
+function getDimension(){
+    let winWidth=window.innerWidth;
+    let postContainerWidth=document.querySelector(".new-post-container").offsetWidth;
+    btnAdd.style.left=((winWidth-postContainerWidth)/2)+"px";
+}
+getDimension();
 
 function nextElem(er){
     er.addEventListener("keydown",(e)=>{      
@@ -6,27 +14,19 @@ function nextElem(er){
             er.nextElementSibling.focus();
                     } 
                })
-          }
-
-/*function nextElem3(ew){
-    if(ew.keyCode===13){
-            //create a global p element:
-             getElem(elem);         
-            if(getE.nextElementSibling){
-                    getE.nextElementSibling.focus();
-                }
-            else{
-            let pEl= document.createElement("p");
-            pEl.setAttribute("contenteditable", "true");
-            pEl.setAttribute("onfocus", "getElem(this)");
-            pE1.setAttribute("onkeydown", "nextElem3(ew)");
-            document.querySelector(".new-post-container").appendChild(pEl).focus();  
-            addClassF();
-                }
-            
-            }          
-}*/
+            }
 function nextElem3(ka){
+    /*get the distance of the current element from top of the window:*/
+    let getHeight2=window.pageYOffset + ka.getBoundingClientRect().top;
+    btnAdd.style.display="block";
+    /*apply the height of the current element from top of the page as the 
+        css top property:*/ 
+    btnAdd.style.display="inline-block";
+    btnAdd.style.top=`${getHeight2}px`;
+    //document.querySelectorAll(".new-post-passage").id='';
+    document.getElementById('txt').id="";
+    ka.id='txt';   
+
     ka.addEventListener("keydown", (e1)=>
     {
         
@@ -37,7 +37,7 @@ function nextElem3(ka){
         }
      
         if(e1.keyCode===13){
-            //create a global p element:
+            /*create a global p element:*/
             if(ka.nextElementSibling){
                 ka.nextElementSibling.focus();
             }
@@ -49,64 +49,28 @@ function nextElem3(ka){
                 pElement.setAttribute("onfocus", "nextElem3(this)");
                 document.querySelector(".new-post-container").appendChild(pElement).focus();  
             }          
-           // addClassF();
         } 
-        if(e1.keyCode===8 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===8){
-            ka.remove()         
+        if(e1.keyCode===8 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===8 ){
+            ka.previousElementSibling.id="txt";  
+            ka.remove();                  
         }
-
-       /* switch(e1.keyCode){
-            case 13:if(ka.nextElementSibling){
-                    ka.nextElementSibling.focus();
-                }
-            
-                else{
-                    let pElement= document.createElement("p");
-                    pElement.setAttribute("contenteditable", "true");
-                    pElement.setAttribute("class", "new-post-passage");
-                    pElement.setAttribute("onfocus", "nextElem3(this)");
-                    document.querySelector(".new-post-container").appendChild(pElement).focus();  
-                } 
-            case 8:    if(ka.innerHTML===""){
-                ka.remove()
-               }
-        }*/
-
-       /* if(e1.keyCode===13){
-            //create a global p element:
-            if(ka.nextElementSibling){
-                ka.nextElementSibling.focus();
-            }
-          
-            else{
-                let pElement= document.createElement("p");
-                pElement.setAttribute("class", "new-post-passage");
-                pElement.setAttribute("contenteditable", "true");
-                pElement.setAttribute("onfocus", "nextElem3(this)");
-                document.querySelector(".new-post-container").appendChild(pElement).focus();  
-            }          
-           // addClassF();
-        } 
-
-        else {
-            if(e1.keyCode===8){
-                //create a global p element:
-               if(ka.innerHTML===""){
-                ka.remove()
-               }
-            }
-       
-           
-           // addClassF();
-        } */
-
-        
+       if(e1.keyCode===46 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===46){
+            ka.previousElementSibling.id="txt";  
+            ka.remove();         
+        }   
     })
-    
-
 }
 
 function nextElem2(k1){
+     /*get the distance of the current element from top of the window:*/
+     let getHeight1=window.pageYOffset + k1.getBoundingClientRect().top;
+     btnAdd.style.display="inline-block";
+     /*apply the height of the current element from top of the page as the 
+         css top property:*/ 
+     btnAdd.style.display="block";
+     btnAdd.style.top=`${getHeight1}px`;
+     document.getElementById('txt').id="";
+     k1.id='txt';
     k1.addEventListener("keydown", (e)=>
     {
        if(e.shiftKey){
@@ -127,6 +91,7 @@ function nextElem2(k1){
                 pElement.setAttribute("contenteditable", "true");
                 pElement.setAttribute("class", "new-post-passage");
                 pElement.setAttribute("onfocus", "nextElem3(this)");
+                /*pElement.setAttribute("onblur", "removeId(this)");*/
                 document.querySelector(".new-post-container").appendChild(pElement).focus();  
 
             }          
@@ -134,10 +99,83 @@ function nextElem2(k1){
         } 
         
     })
-    
-
 }
 
+function toggleAddMedia(){
+    if(document.querySelector(".add-media-section").style.display=="none"){
+        document.querySelector(".add-media-section").style.display="inline-block"
+    }
+    else{
+        document.querySelector(".add-media-section").style.display="none";
+    }
+}
+function deleteMedia(media){   
+    media.addEventListener("keydown", (e4)=>{
+        if(e4.keyCode===8 || e4.keyCode===46){
+            media.remove()
+        }
+    })
+}
 
+function loadImage(img){
+    document.querySelector(".add-media-section").style.display="none";
+    var txt = document.getElementById('txt');
+    /*create a img tag in order to put uploaded img into it */
+    var imageElement = document.createElement('img');
+    imageElement.style.maxWidth="100%";
+    imageElement.style.height="auto";   
+    imageElement.style.marginBottom="21px";
+    imageElement.style.cursor="pointer";
+    imageElement.setAttribute("contenteditable","true");
+    imageElement.setAttribute("onclick","deleteMedia(this)");
+    /*add a img tag after the current p element */
+    txt.parentNode.insertBefore(imageElement,txt.nextSibling );
+    let pElement= document.createElement("p");
+    pElement.setAttribute("contenteditable", "true");
+    pElement.setAttribute("class", "new-post-passage");
+    pElement.setAttribute("onfocus", "nextElem3(this)");
+    imageElement.parentNode.insertBefore(pElement,imageElement.nextSibling );
+    imageElement.src = URL.createObjectURL(img.target.files[0]);
+    imageElement.onload = function() {
+    URL.revokeObjectURL(imageElement.src) 
+    }
+}
 
+function loadVideo(video){
+    document.querySelector(".add-media-section").style.display="none";
+    var txt = document.getElementById('txt');
+    /*create a video tag in order to put uploaded video into it */
+    var videoElement = document.createElement('video');
+    videoElement.style.maxWidth="100%";
+    videoElement.style.height="auto";
+    videoElement.style.marginBottom="21px";
+    videoElement.style.cursor="pointer";
+    videoElement.setAttribute("contenteditable","true");
+    videoElement.setAttribute("onclick","deleteMedia(this)");
+    videoElement.setAttribute("controls","on");
+        /*add a video tag after the current p element */
+    txt.parentNode.insertBefore(videoElement,txt.nextSibling );
+    let pElement= document.createElement("p");
+    pElement.setAttribute("contenteditable", "true");
+    pElement.setAttribute("class", "new-post-passage");
+    pElement.setAttribute("onfocus", "nextElem3(this)");
+    videoElement.parentNode.insertBefore(pElement,videoElement.nextSibling );
+    videoElement.src = URL.createObjectURL(video.target.files[0]);
+    videoElement.onload = function() {
+    URL.revokeObjectURL(videoElement.src) 
+    } 
+}
 
+document.querySelector('.save-btn').addEventListener("click", ()=>
+{
+    let getSaveSpan=document.getElementById("save-post-txt");
+  getSaveSpan.style.color="green";
+  getSaveSpan.style.transition="transform .5s ease-in-out";
+  getSaveSpan.style.transform="scale(1.3)"
+  setTimeout(function(){
+    getSaveSpan.style.transform="scale(1)";
+  },500)
+  
+  getSaveSpan.innerHTML=" saved";
+}
+)
