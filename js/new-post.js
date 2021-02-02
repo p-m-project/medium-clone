@@ -37,7 +37,7 @@ function nextElem3(ka){
         }
      
         if(e1.keyCode===13){
-            //create a global p element:
+            /*create a global p element:*/
             if(ka.nextElementSibling){
                 ka.nextElementSibling.focus();
             }
@@ -47,17 +47,18 @@ function nextElem3(ka){
                 pElement.setAttribute("class", "new-post-passage");
                 pElement.setAttribute("contenteditable", "true");
                 pElement.setAttribute("onfocus", "nextElem3(this)");
-                /*pElement.setAttribute("onblur", "removeId(this)");*/
                 document.querySelector(".new-post-container").appendChild(pElement).focus();  
             }          
-           // addClassF();
         } 
-        if(e1.keyCode===8 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===8){
-            ka.remove()         
+        if(e1.keyCode===8 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===8 ){
+            ka.previousElementSibling.id="txt";  
+            ka.remove();                  
         }
-        
+       if(e1.keyCode===46 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===46){
+            ka.previousElementSibling.id="txt";  
+            ka.remove();         
+        }   
     })
-    
 }
 
 function nextElem2(k1){
@@ -98,13 +99,7 @@ function nextElem2(k1){
         } 
         
     })
-    
-
 }
-
-/*function removeId(elem){
-    elem.id=""
-}*/
 
 function toggleAddMedia(){
     if(document.querySelector(".add-media-section").style.display=="none"){
@@ -114,21 +109,30 @@ function toggleAddMedia(){
         document.querySelector(".add-media-section").style.display="none";
     }
 }
+function deleteMedia(media){   
+    media.addEventListener("keydown", (e4)=>{
+        if(e4.keyCode===8 || e4.keyCode===46){
+            media.remove()
+        }
+    })
+}
 
 function loadImage(img){
+    document.querySelector(".add-media-section").style.display="none";
     var txt = document.getElementById('txt');
-    /* */
-    /* */
+    /*create a img tag in order to put uploaded img into it */
     var imageElement = document.createElement('img');
     imageElement.style.maxWidth="684px";
-    imageElement.style.display="flex";
-    imageElement.style.alignSelf="center";
     imageElement.style.marginBottom="21px";
+    imageElement.style.cursor="pointer";
+    imageElement.setAttribute("contenteditable","true");
+    imageElement.setAttribute("onclick","deleteMedia(this)");
+    /*add a img tag after the current p element */
     txt.parentNode.insertBefore(imageElement,txt.nextSibling );
     let pElement= document.createElement("p");
     pElement.setAttribute("contenteditable", "true");
     pElement.setAttribute("class", "new-post-passage");
-    pElement.setAttribute("onfocus", "nextElem2(this)");
+    pElement.setAttribute("onfocus", "nextElem3(this)");
     imageElement.parentNode.insertBefore(pElement,imageElement.nextSibling );
     imageElement.src = URL.createObjectURL(img.target.files[0]);
     imageElement.onload = function() {
@@ -136,5 +140,27 @@ function loadImage(img){
     }
 }
 
-
+function loadVideo(video){
+    document.querySelector(".add-media-section").style.display="none";
+    var txt = document.getElementById('txt');
+    /*create a video tag in order to put uploaded video into it */
+    var videoElement = document.createElement('video');
+    videoElement.style.maxWidth="684px";
+    videoElement.style.marginBottom="21px";
+    videoElement.style.cursor="pointer";
+    videoElement.setAttribute("contenteditable","true");
+    videoElement.setAttribute("onclick","deleteMedia(this)");
+    videoElement.setAttribute("controls","on");
+        /*add a video tag after the current p element */
+    txt.parentNode.insertBefore(videoElement,txt.nextSibling );
+    let pElement= document.createElement("p");
+    pElement.setAttribute("contenteditable", "true");
+    pElement.setAttribute("class", "new-post-passage");
+    pElement.setAttribute("onfocus", "nextElem3(this)");
+    videoElement.parentNode.insertBefore(pElement,videoElement.nextSibling );
+    videoElement.src = URL.createObjectURL(video.target.files[0]);
+    videoElement.onload = function() {
+    URL.revokeObjectURL(videoElement.src) 
+    } 
+}
 
