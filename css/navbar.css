@@ -360,7 +360,10 @@
 
 .stories-article{
     padding-left: 1.5em;
-    padding-top: 5em;
+    padding-top: 2em;
+}
+.stories-article-2{
+    padding-top: 4em;
 }
 
 .stories-part{
