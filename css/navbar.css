@@ -399,7 +399,7 @@
             transform: translate(-50%, -50%);
   }
   
-  button {
+  .stories-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
