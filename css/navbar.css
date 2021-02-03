@@ -283,8 +283,8 @@
   }
   /* ****************************************Masoume */
   .storeis-title{
-    padding-right: 64px;
-    padding-left: 64px;
+    padding-right: 7em;
+    padding-left: 7em;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 64px;
@@ -347,25 +347,215 @@
 }
 
 .storeis-menu-right a p{
-    font-size: 1em;
+    font-size: 11px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 7px;
 }
 
 .storeis-menu-right-tow a p{
-    font-size: 1em;
+    font-size: 11px;
+    font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-top: 7px;
 }
 
-.stories-container{
-    display: block;
-    padding-bottom: 100px;
-    padding-top: 100px;
+.stories-article{
+    padding-left: 1.5em;
+    padding-top: 2em;
+}
+.stories-article-2{
+    padding-top: 4em;
+}
+
+.stories-part{
+    display: flex;
+}
+
+/* ******************button */
+.centerMe {
+    position: absolute;
+    padding-left: 15em;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  
+  button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    overflow: hidden;
+  }
+  button .icon {
+    position: relative;
+    background: #1D242B;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
     text-align: center;
-}
+    color: #fff;
+    font-size: 18px;
+    -webkit-transition: .2s color;
+    transition: .2s color;
+    border-radius: 2px;
+  }
+  button .icon .fa {
+    width: 30px;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+  }
+  button .icon .fa-check {
+    color: #38B87C;
+  }
+  button .icon .fa-question {
+    color: #2492FF;
+  }
+  button .icon:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background: #1D242B;
+    top: 12.5px;
+    right: 1px;
+    -webkit-transition: .2s right;
+    transition: .2s right;
+    z-index: 1;
+  }
+  button .text {
+    position: relative;
+    width: 0;
+    height: 30px;
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+    background: #F34541;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-weight: 300;
+    -webkit-transition: .2s all;
+    transition: .2s all;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+  button .text span {
+    width: 100%;
+    opacity: 0;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    -webkit-transition: .3s all;
+    transition: .3s all;
+    padding-top: .5em;
+  }
+  button:hover .icon {
+    color: #F34541;
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  button:hover .icon:after {
+    right: -2px;
+  }
+  button:hover .text {
+    width: 120px;
+  }
+  button:hover .text span {
+    opacity: 1;
+    top: 0;
+  }
+  button.confirm .icon {
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  button.confirm .icon .fa {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  button.confirm .icon:after {
+    right: -2px;
+  }
+  button.confirm .text {
+    background: #2492FF;
+    width: 120px;
+  }
+  button.confirm .text span {
+    opacity: 1;
+    top: 0;
+  }
+  button.done .icon {
+    border-radius: 0;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+  }
+  button.done .icon .fa {
+    -webkit-transform: translateY(-60px);
+            transform: translateY(-60px);
+  }
+  button.done .icon:after {
+    right: -2px;
+  }
+  button.done .text {
+    background: #38B87C;
+    width: 120px;
+  }
+  button.done .text span {
+    opacity: 1;
+    top: 0;
+  }
+  
+  @-webkit-keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.7);
+              transform: scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      -webkit-transform: scale(0.7);
+              transform: scale(0.7);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+/* ******************button */
 
-.stories-container h2{
-    padding-bottom: 1em;
-}
+
+@media screen and (min-width:375px) {
+    .storeis-title{
+        padding-left: 3em;
+    }    
+  }
+
+@media screen and (min-width:1024px) {
+    .storeis-title{
+        padding-left: 7em;
+    }    
+  }
 
 
 
+
+  
 
   
