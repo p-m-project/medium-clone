@@ -283,9 +283,16 @@
   }
   
 
+  @media screen and (min-width:375px) {
+    .stories-button{
+      padding-left: 17em;
+      padding-bottom: 5em;
+      padding-top: 0;
+    }
+  }
+
 
 
 
   
 
-  
