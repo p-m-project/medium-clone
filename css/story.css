@@ -27,3 +27,8 @@
     overflow: visible;
 
 }
+
+button.w3-button{
+    font-weight: bold;
+    color: lemonchiffon;
+}

@@ -282,35 +282,4 @@
     }    
   }
   /* ***********************tab menu */
-  .stories-menu{
-    border-bottom: 1px solid;
-  }
-
-  .storeis-menu-tab{
-    padding-top: 1em !important;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 2em !important;
-  }
-
-  .storeis-menu-tab p{
-    padding-top: 1em;
-  }
-
-  .stories-button{
-    display: flex;
-  }
-
-.stories-button button{
-  padding-left: 3em;
-  background: red;
-  color: #fff;
-  border-radius: 20px;
-  padding: 1em;
-  margin-left: 3em;
-}
-
-@media screen and (max-width:375px) {
-  .stories-button button{
-      padding-top: 1.5em;
-  }    
-}
+  
