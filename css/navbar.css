@@ -295,3 +295,11 @@
   .storeis-menu-tab p{
     padding-top: 1em;
   }
+
+  .stories-button{
+    display: flex;
+  }
+
+.stories-button button{
+  padding-left: 3em;
+}
