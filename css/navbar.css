@@ -282,3 +282,6 @@
     }    
   }
   /* ***********************tab menu */
+  .stories-menu{
+    border-bottom: 1px solid;
+  }
