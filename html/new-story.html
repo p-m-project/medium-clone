@@ -21,35 +21,34 @@
         </a>
         <div class="add-media-section" style="display:none;">
             
-            <a href="#">
+            <a href="#" title="upload picture">
                 <label for="img-input">
                 <i class="fa fa-image">
                 </i>
                 <input type="file" id="img-input" name="img" accept="image/png, image/jpeg" class="hidden" onchange="loadImage(event)" >
                 </label>
             </a>
-            <a href="#">
+            <a href="#" title="upload video">
                 <label for="video-input">
                 <i class="fa fa-video-camera">
                 </i>
                 <input type="file" id="video-input" name="video" accept="video/*" class="hidden" onchange="loadVideo(event)" >
                 </label>
             </a>
-            <a href="#">
-                <i class="fa fa-bold"></i>
+            <a href="#" title="make Bold">
+                <i class="fa fa-bold" onclick="makeBold()"></i>
             </a>
-            <a href="#">
-                <i class="fa fa-italic"></i>
+            <a href="#" title="make Italic">
+                <i class="fa fa-italic" onclick="makeItalic()"></i>
             </a>
-            <a href="#">
-                <i class="fa fa-underline"></i>
-            </a>
-            <a href="#">
-                <i class="fa fa-font"></i>
+            
+            <a href="#" title="H3 tag">
+                <i class="fa fa-font" onclick="makeTitle()"></i>
             </a>
             
         </div>
     </div>
+    
 
     <div>
         <!--this navigation bar is different with the other navigations-->
@@ -107,13 +106,22 @@
             </nav>
         </nav>
         <div class="main">
-            <div class="new-post-container">
-               <div class="save-post-text">
-                   <span id="save-post-txt" class="save-post-text-span fa fa-check-circle" style="color: indianred;"> not saved yet</span>
-               </div> 
-               <h3 class="new-post-title" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></h3>
-               <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true" id="txt"></p>                   
+            <div class="new-post-section">
+                <!--the content of "post viewer page" should be gotten from the start of this div:-->
+                <div class="new-post-container">
+                    <div class="save-post-text">
+                        <span id="save-post-txt" class="save-post-text-span fa fa-check-circle" style="color: indianred;"> not saved yet</span>
+                    </div> 
+                    <h2 class="new-post-title" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></h2>
+                    <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true" id="txt"></p>                   
+                </div>
+                <div class="new-post-category">
+                    <!--
+                        
+                    -->
+                </div>
             </div>
+            
         </div>
 
     </div>
