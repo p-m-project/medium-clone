@@ -23,7 +23,6 @@ function nextElem3(ka){
         css top property:*/ 
     btnAdd.style.display="inline-block";
     btnAdd.style.top=`${getHeight2}px`;
-    //document.querySelectorAll(".new-post-passage").id='';
     document.getElementById('txt').id="";
     ka.id='txt';   
 
@@ -91,11 +90,9 @@ function nextElem2(k1){
                 pElement.setAttribute("contenteditable", "true");
                 pElement.setAttribute("class", "new-post-passage");
                 pElement.setAttribute("onfocus", "nextElem3(this)");
-                /*pElement.setAttribute("onblur", "removeId(this)");*/
                 document.querySelector(".new-post-container").appendChild(pElement).focus();  
 
             }          
-           // addClassF();
         } 
         
     })
