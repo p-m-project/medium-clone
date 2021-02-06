@@ -112,13 +112,39 @@
                     <div class="save-post-text">
                         <span id="save-post-txt" class="save-post-text-span fa fa-check-circle" style="color: indianred;"> not saved yet</span>
                     </div> 
+                    <div class="select-category">
+                        <form action="" method="GET">
+                            <label class="fa">Post Category:</label>
+                            <select>
+                                <option>health</option>
+                                <option>nature</option>
+                                <option>children</option>
+                                <option>women</option>
+                                <option>technology</option>
+                                <option>tourism</option>
+                                <option>fashion</option>
+                                <option>politics</option>
+                                <option>mind</option>
+                                <option>people</option>
+                            </select>
+        
+                        </form>
+        
+                    </div>
+                    <div class="select-thumbnail">
+                        <p class="fa">Post Thumbnail: </p>
+                        <div class="select-thumbnail-container">
+                            <a href="#" title="upload picture">
+                                <label for="thumbnail-input"> 
+                                <i class="fa fa-plus">
+                                </i>
+                                <input type="file" id="thumbnail-input" name="img" accept="image/png, image/jpeg" class="hidden" onchange="loadThumbnail(event)" >
+                                </label>
+                            </a>
+                        </div>
+                    </div>
                     <h2 class="new-post-title" contenteditable="true" onfocus="nextElem(this)" contenteditable="true"></h2>
                     <p class="new-post-passage" contenteditable="true" onfocus="nextElem2(this)"  contenteditable="true" id="txt"></p>                   
-                </div>
-                <div class="new-post-category">
-                    <!--
-                        
-                    -->
                 </div>
             </div>
             

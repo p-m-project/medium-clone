@@ -79,9 +79,57 @@ b{
 .save-post-text{
     font-size: 21px;
     line-height: 1.58;
-    font-weight: 400;
     overflow: visible;
+    border-bottom: solid 1px rgba(104, 74, 148, .1);
     margin-bottom: 21px;
+    padding-bottom: 21px;
+}
+.save-post-text .fa{
+    font-weight: bold;
+}
+.select-category {
+    line-height: 1.58;
+    font-weight: 400;
+    border-bottom: solid 1px rgba(104, 74, 148, .1);
+
+    margin-bottom: 21px;
+    padding-bottom: 21px;}
+.select-category form{
+    font-size: 21px;
+}
+
+.select-category label {
+    font-size: inherit;
+    font-weight: bold;
+    color: slategrey;
+}
+
+.select-category form select{
+    border: solid 1px rgba(248, 165, 194,.4);
+}
+
+.select-thumbnail{
+    margin-bottom: 21px;
+    padding-bottom: 21px;
+}
+.select-thumbnail p.fa{
+    font-size: 21px;
+    font-weight: bold;
+    color: slategrey;
+    padding-bottom: .8rem;
+}
+.select-thumbnail-container{
+    background-color: rgba(104, 74, 148, .3);
+    text-align: center;
+    border: dashed 2px rgba(104, 74, 148, .4);
+    border-radius: 15px;
+}
+.select-thumbnail-container i {
+    cursor:pointer
+}
+.select-thumbnail-container .fa.fa-plus{
+    font-size: 13rem;
+    opacity: .3;
 }
 
 .new-post-section .new-post-passage, .new-post-section .new-post-title, .new-post-section .new-post-h3{

@@ -10,6 +10,25 @@ function getDimension(){
 }
 getDimension();
 
+function loadThumbnail(thumbnail){
+    let thc = document.querySelector(".select-thumbnail-container");
+    let thumbnailElement = document.createElement('img');
+    thumbnailElement.style.maxWidth="100%";
+    thumbnailElement.style.height="auto";
+    thumbnailElement.style.marginBottom="16px";
+    thumbnailElement.style.marginTop="10px";
+    thumbnailElement.style.cursor="pointer";
+    thumbnailElement.setAttribute("contenteditable","true");
+    thumbnailElement.setAttribute("onclick","deleteMedia(this)");
+        /*add a img tag after the current p element */
+        thc.parentNode.insertBefore(thumbnailElement,thc.nextSibling );
+    thumbnailElement.src = URL.createObjectURL(thumbnail.target.files[0]);
+    thumbnailElement.onload = function() {
+    URL.revokeObjectURL(thumbnailElement.src) 
+    } 
+}
+
+
 function nextElem(er){
     er.addEventListener("keydown",(e)=>{      
         if(e.keyCode===13){
