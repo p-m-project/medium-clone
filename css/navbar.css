@@ -301,16 +301,24 @@
   }
 
 .stories-button button{
-  padding-left: 3em;
   background: red;
   color: #fff;
   border-radius: 20px;
   padding: 1em;
-  margin-left: 3em;
+  margin-left: 2em !important;
+
 }
 
-@media screen and (max-width:375px) {
+@media screen and (min-width:375px) {
   .stories-button button{
-      padding-top: 1.5em;
+    padding-right: 2em !important;
+    padding-top: 1em !important;
+    padding-left: 1em !important;
+  }    
+}
+
+@media screen and (min-width:375px) {
+  .stories-button p{
+    line-height: 16px;
   }    
 }
