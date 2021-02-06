@@ -4,6 +4,11 @@ body + div{
 .hidden{
     display:none;
 }
+b{
+    font-size: inherit;
+}
+
+/*style of the elements belongs to new story page navbar*/
 .nav-signin{
     min-height: 100px;
 }
@@ -32,10 +37,12 @@ body + div{
 .save-btn:hover .save-post-text{
     background-color: aqua;
 }
+/*end of style of the elements belongs to new story page navbar*/
 
+/* style of the add media button*/
 .button-add-section{
     position: absolute;
-    width: 200px;
+    /*width: 200px;*/
     height:2rem;
     border: solid 1px rgba(104, 74, 148, 0);
     border-radius: 50%;
@@ -43,7 +50,7 @@ body + div{
 .button-add-section > a{
     display: inline-block;
 }
-.button-add-section .fa{
+.button-add-section .fa, .add-media-section .fa{
     color:rgba(104, 74, 148, 1);
 }
 .button-add-section i.fa-plus{
@@ -61,6 +68,9 @@ body + div{
     margin-left: 10px;
 
 }
+
+/*  end of style of the add media button*/
+
 .new-post-container{
     max-width: 740px;
     margin: 0 auto;
@@ -69,12 +79,60 @@ body + div{
 .save-post-text{
     font-size: 21px;
     line-height: 1.58;
-    font-weight: 400;
     overflow: visible;
+    border-bottom: solid 1px rgba(104, 74, 148, .1);
     margin-bottom: 21px;
+    padding-bottom: 21px;
+}
+.save-post-text .fa{
+    font-weight: bold;
+}
+.select-category {
+    line-height: 1.58;
+    font-weight: 400;
+    border-bottom: solid 1px rgba(104, 74, 148, .1);
+
+    margin-bottom: 21px;
+    padding-bottom: 21px;}
+.select-category form{
+    font-size: 21px;
 }
 
-.new-post-container .new-post-passage, .new-post-container .new-post-title{
+.select-category label {
+    font-size: inherit;
+    font-weight: bold;
+    color: slategrey;
+}
+
+.select-category form select{
+    border: solid 1px rgba(248, 165, 194,.4);
+}
+
+.select-thumbnail{
+    margin-bottom: 21px;
+    padding-bottom: 21px;
+}
+.select-thumbnail p.fa{
+    font-size: 21px;
+    font-weight: bold;
+    color: slategrey;
+    padding-bottom: .8rem;
+}
+.select-thumbnail-container{
+    background-color: rgba(104, 74, 148, .3);
+    text-align: center;
+    border: dashed 2px rgba(104, 74, 148, .4);
+    border-radius: 15px;
+}
+.select-thumbnail-container i {
+    cursor:pointer
+}
+.select-thumbnail-container .fa.fa-plus{
+    font-size: 13rem;
+    opacity: .3;
+}
+
+.new-post-section .new-post-passage, .new-post-section .new-post-title, .new-post-section .new-post-h3{
     border:solid 1px rgba(255, 105, 180,.3);
 }
 
@@ -92,7 +150,13 @@ body + div{
     font-weight: 400;
     overflow: visible;
     margin-bottom: 21px;
-
+}
+.new-post-h3 {
+    font-size: 36px;
+    line-height:1.58;
+    font-weight: 400;
+    overflow: visible;
+    margin-bottom: 21px;
 }
 
 .new-post-passage b, .new-post-passage div, .new-post-passage i, .new-post-passage p{

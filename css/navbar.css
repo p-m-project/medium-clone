@@ -282,6 +282,7 @@
     }    
   }
   /* ***********************tab menu */
+<<<<<<< HEAD
   .stories-menu{
     border-bottom: 1px solid;
   }
@@ -322,3 +323,6 @@
     line-height: 16px;
   }    
 }
+=======
+  
+>>>>>>> c33f53872972574ec2146fb0226373e510cd89c3

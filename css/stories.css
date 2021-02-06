@@ -7,6 +7,32 @@
     padding-bottom: 64px;
     display: block;
   }
+  .stories-menu{
+    border-bottom: 1px solid;
+  }
+
+  .stories-menu-tab{
+    padding-top: 1em !important;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 2em !important;
+  }
+
+  .stories-menu-tab p{
+    padding-top: 1em;
+    line-height: 2em;
+  }
+
+  .stories-button{
+    display: flex;
+  }
+
+.stories-button button{
+  background: red;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 3vw;
+}
 
   .stories-menu{
       background-color: #fff;
@@ -64,13 +90,13 @@
 }
 
 .storeis-menu-right a p{
-    font-size: 11px;
+    font-size: 1rem;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-top: 7px;
 }
 
 .storeis-menu-right-tow a p{
-    font-size: 11px;
+    font-size: 1rem;
     font-family: sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-top: 7px;
 }
@@ -258,9 +284,19 @@
 /* ******************button */
 
 
-@media screen and (min-width:375px) {
+@media screen and (min-width:200px) and (max-width:450px){
+    .storeis-title{
+        padding-left: 1em;
+        padding-right: 1em;
+
+    }    
+  }
+
+  @media screen and (min-width:450px) and (max-width:1024px){
     .storeis-title{
         padding-left: 3em;
+        padding-right: 3em;
+
     }    
   }
 
@@ -269,3 +305,5 @@
         padding-left: 7em;
     }    
   }
+
+  
