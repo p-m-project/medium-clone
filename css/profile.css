@@ -1,9 +1,12 @@
-/* *{
+.profile{
     width: 100%;
     margin: auto;
     padding: 20px;
 }
 
 .profile{
-    max-width: 700px;
-} */
+    padding-right: 7em;
+    padding-left: 7em;
+    margin-right: auto;
+    margin-left: auto;
+}
