@@ -1,10 +1,200 @@
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.5em;
+}
+.main{
+    min-height: 200vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+}
+.post-view-container{
+    grid-column: 4/span 6;
+}
+/* style of sidebar*/
+.post-page-sidebar{   
+    grid-column: 2/span 1;
+    position: relative;
+}
+
+.sidebar-container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    position: sticky;
+    top: 200px;
+}
+
+.sidebar-cells{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+
+}
+.sidebar-cells b{
+    line-height: 1rem;
+    font-size: 1rem;
+    text-align: center;
+    color: rgba(0, 0, 0, .7);
+}
+.sidebar-cells,  .sidebar-cells .fa, .sidebar-cells .btn{
+    font-size: 1.2rem;
+    text-align: center;
+}
+.sidebar-cells .btn.btn-follow{
+    margin-bottom: 0;
+}
+.sidebar-cells .fa{
+    color: rgba(0, 0, 0, .7);
+}
+
+.sidebar-cells a.fa:hover{
+    color: rgba(0, 0, 0, .4);
+}
+.sidebar-cells a.fa{
+    margin-right: 5px;
+    transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -o-transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -moz-transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -webkit-transition: color .2s ease-in-out, transform .5s ease-in-out;
+}
+.sidebar-cells a.fa.fa-heart-o:visited{
+    color: rgba(0, 0, 0, 1);
+}
+.sidebar-cells a.fa:link{
+    color: rgba(0, 0, 0, .7);
+}
+
+.sidebar-cells a.fa:hover{
+    color: rgba(0, 0, 0, .4);
+}
+
+.sidebar-cells a.fa.fa-heart-o:active{
+    color: rgba(255, 30, 30, 0.7);
+    transform: scale(1.5);
+}
+
+.sidebar-cells a.fa.fa-comment-o:active{
+    color:rgba(0, 128, 0, .7);
+    transform: scale(1.5);
+}
+
+.sidebar-cells a.fa.fa-save:active{
+    transform: scale(1.5);
+    color: rgba(0, 0, 0, 1);
+}
+
+/* end style of the sidebar*/
+ .margin-top-div{
+     margin-top: 3rem;
+ }
+
+
+
 .new-post-title{
+    width: 100%;
     font-size: 42px;
     line-height:1.58;
     font-weight: 400;
     overflow: visible;
     margin-bottom: 21px;
 }
+.new-post-title h1{
+    font-size: inherit;
+    line-height:inherit
+}
+
+.post-meta-share{
+    width: 100%;
+    margin-bottom: 21px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+}
+.post-meta{
+    display: flex;
+    flex-direction: row ;
+}
+
+.writer-picture{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.post-meta-info{
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 10px;
+    justify-content: space-between;
+    align-content: center;
+}
+.post-writer-name{
+    display: flex;
+    flex-direction:row ;
+    -ms-flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.post-writer-name div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+.right-margin{
+    margin-right: 10px;
+}
+.post-writer-name div .btn{
+    margin-bottom: 0;
+}
+.post-writer-name a{
+    text-align: center;
+}
+
+.post-meta-details{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+.seperator {
+    padding: 0 6px;
+}
+
+.post-share{
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-end;
+}
+.share-btn a{
+    padding: 0 6px;
+}
+.share-btn a.fa{
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* end of style of post meta elements*/
+.post-thumbnail{
+    margin-bottom: 21px;
+}
+
+.post-thumbnail img{
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* styles of post passage*/
 .new-post-passage {
     font-size: 21px;
     line-height:1.58;
@@ -20,15 +210,132 @@
     margin-bottom: 21px;
 }
 
-.new-post-passage b, .new-post-passage div, .new-post-passage i, .new-post-passage p{
+.new-post-passage b, .new-post-passage div, .new-post-passage i, .new-post-passage p,  .new-post-passage strong{
     display: inline-block;
     font-size: 21px;
     line-height:1.58;
     overflow: visible;
-
 }
-
+.new-post-passage p{
+    margin-bottom: 2rem;
+}
+.new-post-passage h2{
+    font-size: 42px;
+    line-height: 1.58;
+    font-weight: 400;
+    overflow: visible;
+    margin-bottom: 2rem;
+}
+.new-post-passage img,  .new-post-passage video{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
 button.w3-button{
     font-weight: bold;
     color: lemonchiffon;
 }
+.post-end-social{
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    padding:0 0 3% 0;
+    margin:0 0 3% 0;
+    border-bottom: solid 1px rgba(248, 165, 194,.8);
+}
+.post-like-comment{
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    justify-content: center;
+}
+.post-share-buttons{
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    justify-content: center;
+
+}
+.share-button{
+    margin-bottom: 1rem;
+}
+.share-button a{
+    padding: 0 6px;
+}
+.share-button a.fa,  .post-like-comment a.fa{
+    color: rgba(104, 74, 148, .8);
+    font-size: 1.5rem;
+    text-align: center;
+}
+.reaction-cell{
+    margin:  0 6px;
+   
+}
+.reaction-cell .fa{
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+.reaction-cell a.fa{
+    margin-right: 5px;
+    transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -o-transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -moz-transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -webkit-transition: color .2s ease-in-out, transform .5s ease-in-out;
+}
+
+.reaction-cell a.fa:link{
+    color: rgba(104, 74, 148, .3);
+}
+
+.reaction-cell a.fa:hover{
+    color: rgba(0, 0, 0, .4);
+}
+.reaction-cell a.fa:focus, .reaction-cell a.fa:visited{
+    color: rgba(0, 0, 0, 1);
+}
+.reaction-cell a.fa.fa-heart-o:active{
+    color: rgba(255, 30, 30, 0.7);
+    transform: scale(1.5);
+}
+
+.reaction-cell a.fa.fa-comment-o:active{
+    color:rgba(0, 128, 0, .7);
+    transform: scale(1.5);
+}
+ /* start of style of post writer*/
+
+ .post-end-writer{
+    padding: 0 0 3% 0;
+    margin: 0 0 3% 0;
+    border-bottom: solid 1px rgba(248, 165, 194,.8);
+ }
+ .post-writer-info{
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 10px;
+    justify-content: space-around;
+    align-content: center;
+ 
+ }
+ .post-writer-follow{
+     margin-left: 10px;
+     display: flex;
+     flex-flow: column wrap;
+     -ms-flex-flow: column wrap;
+     justify-content: flex-end;
+ }
+ .post-writer-follow .btn{
+     margin: 0;
+ }
+ .post-writer-bio{
+     line-height: 1rem;
+     line-height: 1.58;
+    overflow: visible;
+ }

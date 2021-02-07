@@ -9,64 +9,205 @@
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/story.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../js/nav.js"></script>
     <script src="../js/story.js" defer></script>
 
 </head>
 <body>
-    <!--navigation of page  when user is signed in-->
-    <nav class="nav-signin">
-        <nav class="nav-container">
-            <div >
-             
-                 <div class="nav-icon">
-                    <div class="icon-title">
-                        <!-- this tag always links to the home page-->
-                        <a href="#homepage">
-                            <img src="../media/MEDIUM-SBU34.svg"></div>
+   <div class="x">
+            <!--navigation of page  when user is signed in-->
+        <nav class="nav-signin">
+            <nav class="nav-container">
+                <div >
+                
+                    <div class="nav-icon">
+                        <div class="icon-title">
+                            <!-- this tag always links to the home page-->
+                            <a href="#homepage">
+                                <img src="../media/MEDIUM-SBU34.svg"></div>
+                            </a>
+                        </div>
+                
+                </div>
+                <div class="nav-space"></div>
+                <div class="nav-links" style="width: fit-content;">
+                
+                    <div class="navbar-profile-container" >
+                        <a onclick="showProfileMenu()">
+                            <img src="../media/profile1.jpg" alt="" class="nav-profile">
                         </a>
-                    </div>
-               
-            </div>
-            <div class="nav-space"></div>
-            <div class="nav-links" style="width: fit-content;">
-               
-                <div class="navbar-profile-container" >
-                    <a onclick="showProfileMenu()">
-                        <img src="../media/profile1.jpg" alt="" class="nav-profile">
-                    </a>
-                    <div class="navbar-profile-links" style="display: none;">
-                        <div class="navbar-profile-show">
-                            <div class="nav-profile"><img src="../media/profile1.jpg" alt="" class="nav-profile"></div>
-                            <div class="navbar-profile-info">
-                                <p class="navbar-profile-username"><b>name</b></p>
-                                <p class="navbar-profile-mail">gmail@gmail.com</p>
+                        <div class="navbar-profile-links" style="display: none;">
+                            <div class="navbar-profile-show">
+                                <div class="nav-profile"><img src="../media/profile1.jpg" alt="" class="nav-profile"></div>
+                                <div class="navbar-profile-info">
+                                    <p class="navbar-profile-username"><b>name</b></p>
+                                    <p class="navbar-profile-mail">gmail@gmail.com</p>
 
+                                </div>
+                            </div>
+                            <a href="#newpost" >New Story</a>
+                            <a href="#stories">Stories</a>
+                            <a href="#setting">Setting</a>
+                            <a href="#saved">Saved Articles</a>
+                            <a href="#signin">Sign Out</a>
+                            <a href="#about">About</a>
+                            <a href="#contact">Contact</a>
+                        </div>
+                        
+                    </div>
+                    <div class="search-container">
+                    <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                    </div>
+                </div>
+            </nav>
+        </nav>
+        <div class="main">
+            <aside class="post-page-sidebar">
+                <div class="sidebar-container">
+                    <div class="sidebar-cells"><b>writer name</b></div>
+                    <div class="sidebar-cells"><button class="btn btn-follow">follow</button></div>
+                    <div class="sidebar-cells"><a href="#" class="fa fa-heart-o"></a><i class="fa">13</i></div>
+                    <div class="sidebar-cells"><a href="#comments" class="fa fa-comment-o"></a><i class="fa">2</i></div>
+                    <div class="sidebar-cells"><a href="#" class="fa fa-save"></a></div>
+                </div>
+            </aside>
+            <article class="post-view-container">
+                <div class="margin-top-div"></div>
+                <div class="new-post-title">
+                    <h1>Title of article</h1>
+                </div>
+                <div class="post-meta-share">
+                    <div class="post-meta">
+                        <div class="post-meta-writer-picture">
+                            <a href="#user-profile">
+                                <img class="writer-picture" src="../media/user5.jpg">
+                            </a>
+                        </div>
+                        <div class="post-meta-info">
+                            <div class="post-writer-name">
+                               <div class="right-margin">
+                                <a href="#user-profile"><b>writer name</b></a>
+                               </div>
+                                <div>
+                                    <button class="btn btn-follow"><i class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
+                            <div class="post-meta-details">
+                                <span class="post-date">FEB 19, 2021</span>
+                                     <span class="seperator">|</span>
+                                     <span class="post-duration">9 min</span>
                             </div>
                         </div>
-                        <a href="#newpost" >New Story</a>
-                        <a href="#stories">Stories</a>
-                        <a href="#setting">Setting</a>
-                        <a href="#saved">Saved Articles</a>
-                        <a href="#signin">Sign Out</a>
-                        <a href="#about">About</a>
-                        <a href="#contact">Contact</a>
                     </div>
-                    
+                    <div class="post-share">
+                        <div class="share-btn">
+                            <a href="#linkedin" class="fa fa-linkedin" title="share on Linkedin"></a>
+                        </div>
+                        <div class="share-btn">
+                            <a href="#linkedin" class="fa fa-facebook" title="share on facebook"></a>
+                        </div>
+                        <div class="share-btn">
+                            <a href="#twitter" class="fa fa-twitter" title="share on twitter"></a>
+                        </div>                        
+                        <div class="share-btn">
+                            <a href="#linkedin" class="fa fa-save" title="save this article"></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="search-container">
-                  <form action="/action_page.php">
-                    <input type="text" placeholder="Search.." name="search">
-                    <button type="submit"><i class="fa fa-search"></i></button>
-                  </form>
+                <div class="post-thumbnail">
+                    <img src="../media/profile4.jpg" alt="post thumbnail">
                 </div>
-            </div>
-        </nav>
-    </nav>
-    <div class="main">
-        <div class="post-view-container">
+                <div class="new-post-passage ">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem. Mi eget mauris pharetra et ultrices. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Ac ut consequat semper viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in.
+                         Tellus pellentesque eu tincidunt tortor aliquam nulla.
+                          Neque viverra justo nec ultrices.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem. Mi eget mauris pharetra et ultrices. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Ac ut consequat semper viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in.
+                         Tellus pellentesque eu tincidunt tortor aliquam nulla.
+                          Neque viverra justo nec ultrices.
+                    </p>
+                    <video src="../media/Dream_lake_1.mp4" controls></video> 
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem. Mi eget mauris pharetra et ultrices. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Ac ut consequat semper viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in.
+                         Tellus pellentesque eu tincidunt tortor aliquam nulla.
+                          Neque viverra justo nec ultrices.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem. Mi eget mauris pharetra et ultrices. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Ac ut consequat semper viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in.
+                         Tellus pellentesque eu tincidunt tortor aliquam nulla.
+                          Neque viverra justo nec ultrices.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem. Mi eget mauris pharetra et ultrices. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Ac ut consequat semper viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in.
+                         Tellus pellentesque eu tincidunt tortor aliquam nulla.
+                          Neque viverra justo nec ultrices.
+                    </p>
+                    <img src="../media/profile2.jpg">
 
-        </div>       
-    </div>   
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi. Integer enim neque volutpat ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem. Mi eget mauris pharetra et ultrices. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Ac ut consequat semper viverra nam libero justo laoreet. Turpis tincidunt id aliquet risus feugiat in.
+                         Tellus pellentesque eu tincidunt tortor aliquam nulla.
+                          Neque viverra justo nec ultrices.
+                    </p>
+                </div>
+                <div class="post-end-social">   
+                    <div class="post-share-buttons">
+                        <div class="post-share">
+                            <div class="share-button">
+                                <a href="#linkedin" class="fa fa-linkedin" title="share on Linkedin"></a>
+                            </div>
+                            <div class="share-button">
+                                <a href="#linkedin" class="fa fa-facebook" title="share on facebook"></a>
+                            </div>
+                            <div class="share-button">
+                                <a href="#twitter" class="fa fa-twitter" title="share on twitter"></a>
+                            </div>                        
+                            <div class="share-button">
+                                <a href="#linkedin" class="fa fa-save" title="save this article"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-like-comment">
+                        <div class="reaction-cell"><a href="#likes" class="fa fa-heart-o"></a><i class="fa">13</i></div>
+                        <div class="reaction-cell"><a href="#comments" class="fa fa-comment-o"></a><i class="fa">2</i></div>
+                    </div>
+                </div>
+                <div class="post-end-writer">
+                    <div class="post-meta">
+                        <div class="post-meta-writer-picture">
+                            <a href="#user-profile">
+                                <img class="writer-picture" src="../media/user5.jpg">
+                            </a>
+                        </div>
+                        <div class="post-writer-info">
+                            <div class="post-writer-name">
+                               <div class="right-margin">
+                                <a href="#user-profile"><b>writer name</b></a>
+                               </div>
+                            </div>
+                            <div class="post-writer-bio">
+                                Biography of the writer should be shown in here. 
+                                Biography of the writer should be shown in here. 
+                                Biography of the writer should be shown in here.
+                                Biography of the writer should be shown in here. 
+                                Biography of the writer should be shown in here.  
+                                Biography of the writer should be shown in here. 
+                            </div>
+                        </div>
+                        <div class="post-writer-follow">
+                            <button class="btn btn-follow"><i class="fa fa-plus"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </article>       
+        </div> 
+   </div>  
 </body>
 </html>
