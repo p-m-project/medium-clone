@@ -1,9 +1,26 @@
-*{
-    width: 100%;
-    margin: auto;
-    padding: 20px;
+ .profile{
+    padding-left: 7em;
+    padding-top: 1em;
 }
 
-.profile{
-    max-width: 700px;
-}
+@media screen and (max-width:768px) and (min-width:425px) {
+    .profile{
+        padding-left: 3em;
+    }
+      
+  }
+
+  @media screen and (min-width:375px){
+    .profile{
+        padding-left: 3em;
+    }    
+  }
+
+  @media screen and (min-width:320px){
+    .profile{
+        padding-left: 3em;
+    }    
+  } 
+   
+
+
