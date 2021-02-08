@@ -37,6 +37,47 @@
     border: 1px solid;
     margin-top: .5em;
 }
+
+.profile-username{
+    border-top: 1px solid #ccc;
+}
+
+.profile-username p{
+    margin-top: 1em;
+}
+
+.profile-username input{
+    border: 1px solid;
+    margin-top: .5em;
+}
+
+.profile-bio{
+    border-top: 1px solid #ccc;
+}
+
+.profile-bio p{
+    margin-top: 1em;
+}
+
+.profile-bio input{
+    border: 1px solid;
+    margin-top: .5em;
+}
+
+.profile-gmail{
+    border-top: 1px solid #ccc;
+}
+
+.profile-gmail p{
+    margin-top: 1em;
+}
+
+.profile-gmail input{
+    border: 1px solid;
+    margin-top: .5em;
+}
+
+
 @media screen and (min-width:320px) and (max-width:768px){
     .profile{
         padding-left: 3em;
