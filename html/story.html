@@ -213,9 +213,11 @@
                 Other post you might be interested in:
             </div>
         </div>
+        <!--three related article should be shown in ".article-example" div -->
         <section class="more-articles-section">
             <div class="more-articles">
 
+                <!-- related article #1-->
                 <div class="article-example">
                     <div class="sample-article">
                         <img alt="something" src="../media/post5.jpg">
@@ -256,13 +258,14 @@
                         </div>
                     </div>
                 </div>
+                 <!-- related article #2-->
                 <div class="article-example">
                     <div class="sample-article">
                         <img alt="something" src="../media/post6.jpg">
                         <div class="sample-article-meta">
                             <div class="sample-article-title">
                                 <a href="#sample-article">
-                                    <h2>This the title of the sample article number 1</h2>
+                                    <h2>This the title of the sample article number 2</h2>
                                 </a>
                             </div>
                             <div class="sample-article-info">
@@ -296,13 +299,14 @@
                         </div>
                     </div>
                 </div>
+                 <!-- related article #3-->
                 <div class="article-example">
                     <div class="sample-article">
                         <img alt="something" src="../media/post7.jpg">
                         <div class="sample-article-meta">
                             <div class="sample-article-title">
                                 <a href="#sample-article">
-                                    <h2>This the title of the sample article number 1</h2>
+                                    <h2>This the title of the sample article number 3</h2>
                                 </a>
                             </div>
                             <div class="sample-article-info">
@@ -338,7 +342,123 @@
                 </div>
                 
             </div>
-        </section>     
+        </section> 
+        <section class="comment-footer-background-section">
+            <div class="comments-container" id="comments">
+                <div class="display-comment-numbers">Comments <span class="comment-numbers">4</span></div>
+                <div class="new-comment-container">
+                    <div class="new-comment-textbox">
+                        <textarea  rows="5" placeholder="What is in your thought?" ></textarea>
+                    </div>
+                    <div class="new-comment-options">
+                        <!--if user wasn't signed in, display this:-->
+                        <div class="add-commentor-info"></div>
+                        <!--if user was signed in display this:-->
+                        <div class="info-submit">
+                            <div class="commentor-info">
+                                <div class="commentor-profile">
+                                    <a href="#commentor-account">
+                                        <img src="../media/profile4.jpg">
+                                    </a>
+                                </div>
+                                <div class="commentor-name">
+                                    <a href="#commentor-account">name family name</a>
+                                </div>
+                            </div>
+
+                            <div class="post-comment-btn">
+                                <button class="btn btn-submit">Submit comment</button>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="all-comments-container">
+                    <div class="comment-container">
+                        <div class="original-comment-container">
+                            <div class="commentor-info push-left">
+                                <div class="commentor-profile add-border-avatar">
+                                    <a href="#commentor-account">
+                                        <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                    </a>
+                                </div>
+                                <div class="commentor-name">
+                                    <a href="#commentor-account">name family name</a>
+                                </div>
+                            </div>
+                            <div class="commentor-comment">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                 Integer enim neque volutpat 
+                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                 Integer enim neque volutpat 
+                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                            </div>
+                            <div class="reply-comment-section">
+                                <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                            </div>
+                        </div>
+                        <!--this div apllyes a new reply section into the current comment- first reply:-->
+                        <div class="comment-reply-container">
+                                    <div class="commentor-info push-left">
+                                        <div class="commentor-profile add-border-avatar">
+                                            <a href="#commentor-account">
+                                                <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                            </a>
+                                        </div>
+                                        <div class="commentor-name">
+                                            <a href="#commentor-account">name family name</a>
+                                        </div>
+                                    </div>
+                                    <div class="commentor-comment">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                        o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                         Integer enim neque volutpat 
+                                        ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                        o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                         Integer enim neque volutpat 
+                                        ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                    </div>
+                                    <div class="reply-comment-section">
+                                        <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                                    </div>
+                                    <!--third reply-->
+                                    <div class="comment-reply-container">
+                                        <div class="commentor-info push-left">
+                                            <div class="commentor-profile add-border-avatar">
+                                                <a href="#commentor-account">
+                                                    <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                                </a>
+                                            </div>
+                                            <div class="commentor-name">
+                                                <a href="#commentor-account">name family name</a>
+                                            </div>
+                                        </div>
+                                        <div class="commentor-comment">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                            o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                             Integer enim neque volutpat 
+                                            ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                            o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                             Integer enim neque volutpat 
+                                            ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                        </div>
+                                        <div class="reply-comment-section">
+                                            <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                                        </div>
+                                    </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container">
+                footer
+            </div>
+        </section>    
    </div>  
 </body>
 </html>
