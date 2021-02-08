@@ -99,11 +99,35 @@ button:not(:disabled), [type="button"]:not(:disabled), [type="reset"]:not(:disab
     border-color: rgba(86, 61, 124, 1);  
     box-shadow: 0 0 0 0.2rem rgba(172, 117, 255, .5); 
               }
-  .btn-primary.disabled, .btn-primary:disabled {
+  .btn-follow.disabled, .btn-follow:disabled {
     color: #fff;
     background-color: rgba(104, 74, 148, 1);
     border-color: rgba(104, 74, 148, 1);     
-        }
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71; 
+}
+.btn-submit:hover {
+  color: #fff;
+  background-color: #27ae60;
+  border-color: #239e56;   
+}
+.btn-submit:focus, .btn-submit.focus {
+  color: #fff;
+  background-color: #27ae60;
+  border-color: #27ae60;
+  box-shadow: 0 0 0 0.2rem rgb(61, 248, 139); 
+            }
+.btn-submit.disabled, .btn-submit:disabled {
+  color: #fff;
+  background-color: #2ecc71;
+  border-color: #2ecc71;     
+  }
+
+        
 
 .w-100{
   width:100%;

@@ -1,7 +1,6 @@
 
 let btnAdd=document.querySelector(".button-add-section");
 
-
 /*this function get dimension of the page in order to set the left value of emlement with class .button-add-section  */
 function getDimension(){
     let winWidth=window.innerWidth;
@@ -72,11 +71,14 @@ function nextElem3(ka){
         } 
         if(e1.keyCode===8 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===8 ){
             ka.previousElementSibling.id="txt";  
-            ka.remove();                  
+            ka.remove();       
+            document.getElementById("txt").focus();     
         }
        if(e1.keyCode===46 && ka.innerHTML==="" || ka.innerHTML==="<br>" && e1.keyCode===46){
             ka.previousElementSibling.id="txt";  
             ka.remove();         
+            document.getElementById("txt").focus();     
+
         }   
     })
 }
@@ -130,7 +132,10 @@ function toggleAddMedia(){
 function deleteMedia(media){   
     media.addEventListener("keydown", (e4)=>{
         if(e4.keyCode===8 || e4.keyCode===46){
-            media.remove()
+                        /*media.previousElementSibling.focus();
+                        document.getElementById("txt").focus();   */
+
+            media.remove();
         }
     })
 }
