@@ -501,6 +501,7 @@ button.w3-button{
     display: grid;
     background-color: rgba(104, 74, 148, .2);
     grid-template-columns: repeat(12, 1fr);
+    box-shadow: 0 -12px 17px 10px rgb(104 74 148 / 20%);
 }
 /*style of comment section*/
 .comments-container{
@@ -530,6 +531,8 @@ button.w3-button{
     resize: none;
     font-size: 1.2rem;
     line-height: 1.2rem;
+    padding: 10px;
+    background-color:whitesmoke ;
 }
 .new-comment-options{
     display: flex;
@@ -642,11 +645,95 @@ button.w3-button{
     margin-top:40px;
     position: relative;
     border-left: 1px solid #aaaaaa;
-    min-width: 250px;
+    min-width: 180px;
+}
+@media screen and (max-width:840px){
+    .comments-container {
+        grid-column: 3/span 8;
+    }
 }
 
 /* styles of footer section */
 .footer-container{
     grid-column: 1/span 12;
-    height: 200px;
+    height: 260px;
+    background-color:rgba(104, 74, 148, 1);
+}
+.footer-rows{
+    height: 100%;
+    width: 100%;
+    padding: 2vh 6vw;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+}
+.footer-first-row{
+    display: flex;
+    min-height: calc(60% - 30px);
+    flex-direction: row;
+    -ms-flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
+.footer-column{
+    flex-basis: 45%;
+}
+.right-margin{
+    margin-right: 2%;
+}
+.footer-column h3, .footer-column p{
+    text-align: left;
+}
+.footer-column h3{
+    font-size: 2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+.footer-column p{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+
+ .footer-end-row{
+     max-height: calc(40% - 30px);
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+.logo-container{
+    flex-basis: 40%;
+}
+.logo-container a{
+    text-align: left;
+}
+.footer-logo-img{
+    display: block;
+    max-width: 100%;
+    height: auto;  
+}
+.footer-options{
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    align-content: flex-end;
+    justify-content: center;
+}
+.footer-options a{
+    display: inherit;
+    font-size: 1rem;
+    height: 1rem;
+    margin-right: 8px;
+    align-content: flex-end;
+}
+@media screen and (max-width:450px){
+    .footer-column h3{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
+    }
 }
