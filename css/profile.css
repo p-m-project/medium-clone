@@ -52,6 +52,7 @@
 .profile-name input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 
@@ -62,6 +63,7 @@
 .profile-username input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 .profile-bio{
@@ -71,6 +73,7 @@
 .profile-bio input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 .profile-gmail{
@@ -80,6 +83,7 @@
 .profile-gmail input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 .security label{
@@ -95,6 +99,7 @@
 .security-password input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 
@@ -105,11 +110,13 @@
 .security-new-password input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 .security-coin-frame-new input{
     border: 1px solid #ccc;
     margin-top: 1em;
+    border-radius: 10px;
 }
 
 .save{
