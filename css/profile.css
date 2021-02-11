@@ -20,13 +20,10 @@
     grid-column: 4/span 6;
 }
 
-.profile-about{
-    border-bottom: 1px solid #ccc;
-}
-
 .profile-about label{
     font-weight: bold;
     font-size: 2em;
+    border-bottom: 1px solid #ccc;
 }
 
 .profile-about h1{
@@ -40,7 +37,7 @@
 }
 
 .profile-image{
-    margin: 1em 0 1em 0;
+    margin: 2em 0 2em;
 }
 
 .profile-image a{
@@ -48,78 +45,71 @@
 }
 
 
-.profile-name p{
-    margin-top: 1em;
+.profile-name{
+    margin: 2em 0 2em;
 }
 
 .profile-name input{
-    border: 1px solid;
-    margin-top: .5em;
+    border: 1px solid #ccc;
+    margin-top: 1em;
 }
 
 
-.profile-username p{
-    margin-top: 1em;
+.profile-username{
+    margin: 2em 0 2em;
 }
 
 .profile-username input{
-    border: 1px solid;
-    margin-top: .5em;
+    border: 1px solid #ccc;
+    margin-top: 1em;
 }
 
-.profile-bio p{
-    margin-top: 1em;
+.profile-bio{
+    margin: 2em 0 2em;
 }
 
 .profile-bio input{
-    border: 1px solid;
-    margin-top: .5em;
-}
-
-.profile-gmail p{
+    border: 1px solid #ccc;
     margin-top: 1em;
 }
 
+.profile-gmail{
+    margin: 3em 0 3em;
+}
+
 .profile-gmail input{
-    border: 1px solid;
-    margin-top: .5em;
+    border: 1px solid #ccc;
+    margin-top: 1em;
 }
 
 .security label{
     font-weight: bold;
     font-size: 2em;
+    border-bottom: 1px solid;
 }
 
 .security-password{
-    border-top: 1px solid #ccc;
-}
-
-.security-password p{
-    margin-top: 1em;
+    margin: 2em 0 2em;
 }
 
 .security-password input{
-    border: 1px solid;
-    margin-top: .5em;
-}
-
-
-.security-new-password p{
+    border: 1px solid #ccc;
     margin-top: 1em;
 }
 
-.security-new-password input{
-    border: 1px solid;
-    margin-top: .5em;
+
+.security-new-password{
+    margin: 2em 0 2em;
 }
 
-.security-coin-frame-new p{
+.security-new-password input{
+    border: 1px solid #ccc;
     margin-top: 1em;
 }
 
 .security-coin-frame-new input{
-    border: 1px solid;
-    margin-top: .5em;
+    border: 1px solid #ccc;
+    margin-top: 1em;
 }
 
 .save{
@@ -135,6 +125,15 @@
         padding-right: 3em;
     }
 }
+
+.btn1[type=text] {
+    width: 100px;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+  }
+.btn[type=text]:focus {
+    width: 250px;
+  }
    
 
 
