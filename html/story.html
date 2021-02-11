@@ -11,7 +11,6 @@
     <link rel="stylesheet" type="text/css" href="../css/story.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../js/nav.js" defer></script>
-    <script src="../js/story.js" defer></script>
 
 </head>
 <body>
@@ -69,10 +68,10 @@
             <aside class="post-page-sidebar">
                 <div class="sidebar-container">
                     <div class="sidebar-cells"><b>writer name</b></div>
-                    <div class="sidebar-cells"><button class="btn btn-follow">follow</button></div>
-                    <div class="sidebar-cells"><a href="#" class="fa fa-heart-o"></a><i class="fa">13</i></div>
+                    <div class="sidebar-cells"><button class="btn btn-follow btn-follow-text" onclick="makeChecked()">follow</button></div>
+                    <div class="sidebar-cells"><a href="#like" class="fa fa-heart-o"></a><i class="fa">13</i></div>
                     <div class="sidebar-cells"><a href="#comments" class="fa fa-comment-o"></a><i class="fa">2</i></div>
-                    <div class="sidebar-cells"><a href="#" class="fa fa-save"></a></div>
+                    <div class="sidebar-cells"><a href="#save" class="fa fa-save"></a></div>
                 </div>
             </aside>
             <article class="post-view-container">
@@ -93,7 +92,11 @@
                                 <a href="#user-profile"><b>writer name</b></a>
                                </div>
                                 <div>
-                                    <button class="btn btn-follow"><i class="fa fa-plus"></i></button>
+                                    <a href="#follow" class="btn btn-follow btn-follow-icon" onclick="makeChecked()">
+                                        
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        
+                                    </a>
                                 </div>
                             </div>
                             <div class="post-meta-details">
@@ -192,8 +195,6 @@
                                </div>
                             </div>
                             <div class="post-writer-bio">
-                                Biography of the writer should be shown in here. 
-                                Biography of the writer should be shown in here. 
                                 Biography of the writer should be shown in here.
                                 Biography of the writer should be shown in here. 
                                 Biography of the writer should be shown in here.  
@@ -201,7 +202,7 @@
                             </div>
                         </div>
                         <div class="post-writer-follow">
-                            <button class="btn btn-follow"><i class="fa fa-plus"></i></button>
+                            <button class="btn btn-follow btn-follow-icon" onclick="makeChecked()"><i class="fa fa-plus"></i></button>
                         </div>
                     </div>
                 </div>                
@@ -362,7 +363,7 @@
                                     </a>
                                 </div>
                                 <div class="commentor-name">
-                                    <a href="#commentor-account">name family name</a>
+                                    <a href="#commentor-account">name family-name</a>
                                 </div>
                             </div>
 
@@ -375,6 +376,7 @@
                 </div>
                 <div class="all-comments-container">
                     <div class="comment-container">
+                        <!--this section add a new comment part-->
                         <div class="original-comment-container">
                             <div class="commentor-info push-left">
                                 <div class="commentor-profile add-border-avatar">
@@ -400,12 +402,12 @@
                                 <button class="btn"><i class="fa fa-reply"></i> Reply</button>
                             </div>
                         </div>
-                        <!--this div apllyes a new reply section into the current comment- first reply:-->
+                        <!--this div applies a new reply section into the current comment- first reply:-->
                         <div class="comment-reply-container">
                                     <div class="commentor-info push-left">
                                         <div class="commentor-profile add-border-avatar">
                                             <a href="#commentor-account">
-                                                <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                                <img src="../media/profile4.jpg" alt="commentpr-avatar">
                                             </a>
                                         </div>
                                         <div class="commentor-name">
@@ -452,6 +454,32 @@
                                         </div>
                                     </div>
                         </div>  
+                        <!--this section add a new comment part-->
+                        <div class="original-comment-container">
+                            <div class="commentor-info push-left">
+                                <div class="commentor-profile add-border-avatar">
+                                    <a href="#commentor-account">
+                                        <img src="../media/profile3.jpg" alt="commentpr-avatar">
+                                    </a>
+                                </div>
+                                <div class="commentor-name">
+                                    <a href="#commentor-account">name family name</a>
+                                </div>
+                            </div>
+                            <div class="commentor-comment">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                 Integer enim neque volutpat 
+                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                 Integer enim neque volutpat 
+                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                            </div>
+                            <div class="reply-comment-section">
+                                <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -487,5 +515,6 @@
             </div>
         </section>    
    </div>  
+   <script src="../js/story.js"></script>
 </body>
 </html>
