@@ -69,9 +69,9 @@
                 <div class="sidebar-container">
                     <div class="sidebar-cells"><b>writer name</b></div>
                     <div class="sidebar-cells"><button class="btn btn-follow btn-follow-text" onclick="makeChecked()">follow</button></div>
-                    <div class="sidebar-cells"><a href="#like" class="fa fa-heart-o"></a><i class="fa">13</i></div>
+                    <div class="sidebar-cells"><a href="#like" class="fa fa-heart-o" onclick="makeRed()"></a><i class="fa">13</i></div>
                     <div class="sidebar-cells"><a href="#comments" class="fa fa-comment-o"></a><i class="fa">2</i></div>
-                    <div class="sidebar-cells"><a href="#save" class="fa fa-save"></a></div>
+                    <div class="sidebar-cells"><a href="#save" class="fa fa-save" onclick="makeBlack()"></a></div>
                 </div>
             </aside>
             <article class="post-view-container">
@@ -117,7 +117,7 @@
                             <a href="#twitter" class="fa fa-twitter" title="share on twitter"></a>
                         </div>                        
                         <div class="share-btn">
-                            <a href="#linkedin" class="fa fa-save" title="save this article"></a>
+                            <a href="#linkedin" class="fa fa-save" title="save this article" onclick="makeBlack()"></a>
                         </div>
                     </div>
                 </div>
@@ -166,18 +166,18 @@
                                 <a href="#linkedin" class="fa fa-linkedin" title="share on Linkedin"></a>
                             </div>
                             <div class="share-button">
-                                <a href="#linkedin" class="fa fa-facebook" title="share on facebook"></a>
+                                <a href="#facebook" class="fa fa-facebook" title="share on facebook"></a>
                             </div>
                             <div class="share-button">
                                 <a href="#twitter" class="fa fa-twitter" title="share on twitter"></a>
                             </div>                        
                             <div class="share-button">
-                                <a href="#linkedin" class="fa fa-save" title="save this article"></a>
+                                <a href="#save" class="fa fa-save" title="save this article" onclick="makeBlack()"></a>
                             </div>
                         </div>
                     </div>
                     <div class="post-like-comment">
-                        <div class="reaction-cell"><a href="#likes" class="fa fa-heart-o"></a><i class="fa">13</i></div>
+                        <div class="reaction-cell"><a href="#likes" class="fa fa-heart-o" onclick="makeRed()"></a><i class="fa">13</i></div>
                         <div class="reaction-cell"><a href="#comments" class="fa fa-comment-o"></a><i class="fa">2</i></div>
                     </div>
                 </div>
@@ -251,7 +251,7 @@
                                     </div>
                                 </div>
                                 <div class="sample-article-save">
-                                    <a href="#save-sample-article" class="fa fa-save">
+                                    <a href="#save-sample-article" class="fa fa-save" onclick="sampleSave(this)">
                                       
                                     </a>
                                 </div>
@@ -292,7 +292,7 @@
                                     </div>
                                 </div>
                                 <div class="sample-article-save">
-                                    <a href="#save-sample-article" class="fa fa-save">
+                                    <a href="#save-sample-article" class="fa fa-save" onclick="sampleSave(this)">
                                       
                                     </a>
                                 </div>
@@ -333,7 +333,7 @@
                                     </div>
                                 </div>
                                 <div class="sample-article-save">
-                                    <a href="#save-sample-article" class="fa fa-save">
+                                    <a href="#save-sample-article" class="fa fa-save" onclick="sampleSave(this)">
                                       
                                     </a>
                                 </div>
@@ -349,7 +349,7 @@
                 <div class="display-comment-numbers">Comments <span class="comment-numbers">4</span></div>
                 <div class="new-comment-container">
                     <div class="new-comment-textbox">
-                        <textarea  rows="5" placeholder="What is in your thought?" id="comment-textarea"></textarea>
+                        <textarea  rows="5" placeholder="What is in your thought?" class="new-comment-textarea" id="comment-textarea"></textarea>
                     </div>
                     <div class="new-comment-options">
                         <!--if user wasn't signed in, display this:-->
@@ -378,61 +378,66 @@
                     <div class="comment-container">
                         <!--this section add a new comment part-->
                         <div class="original-comment-container">
-                            <div class="commentor-info push-left">
-                                <div class="commentor-profile add-border-avatar">
-                                    <a href="#commentor-account">
-                                        <img src="../media/profile2.jpg" alt="commentpr-avatar">
-                                    </a>
+                            <div>
+                                <div class="commentor-info push-left">
+                                    <div class="commentor-profile add-border-avatar">
+                                        <a href="#commentor-account">
+                                            <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                        </a>
+                                    </div>
+                                    <div class="commentor-name">
+                                        <a href="#commentor-account">name family name</a>
+                                    </div>
                                 </div>
-                                <div class="commentor-name">
-                                    <a href="#commentor-account">name family name</a>
+                                <div class="commentor-comment">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                    o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                     Integer enim neque volutpat 
+                                    ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                    o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                     Integer enim neque volutpat 
+                                    ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
                                 </div>
-                            </div>
-                            <div class="commentor-comment">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
-                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
-                                 Integer enim neque volutpat 
-                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
-                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
-                                 Integer enim neque volutpat 
-                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
-                            </div>
-                            <div class="reply-comment-section">
-                                <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                                <div class="reply-comment-section">
+                                    <a class="btn"  onclick="addCommentSection(this)"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
                             </div>
                         </div>
                         <!--this div applies a new reply section into the current comment- first reply:-->
                         <div class="comment-reply-container">
-                                    <div class="commentor-info push-left">
-                                        <div class="commentor-profile add-border-avatar">
-                                            <a href="#commentor-account">
-                                                <img src="../media/profile4.jpg" alt="commentpr-avatar">
-                                            </a>
-                                        </div>
-                                        <div class="commentor-name">
-                                            <a href="#commentor-account">name family name</a>
-                                        </div>
+                            <div>
+                                <div class="commentor-info push-left">
+                                    <div class="commentor-profile add-border-avatar">
+                                        <a href="#commentor-account">
+                                            <img src="../media/profile4.jpg" alt="commentpr-avatar">
+                                        </a>
                                     </div>
-                                    <div class="commentor-comment">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
-                                        o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
-                                         Integer enim neque volutpat 
-                                        ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
-                                        o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
-                                         Integer enim neque volutpat 
-                                        ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                    <div class="commentor-name">
+                                        <a href="#commentor-account">name family name</a>
                                     </div>
-                                    <div class="reply-comment-section">
-                                        <button class="btn"><i class="fa fa-reply"></i> Reply</button>
-                                    </div>
-                                    <!--third reply-->
-                                    <div class="comment-reply-container">
+                                </div>
+                                <div class="commentor-comment">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                    o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                     Integer enim neque volutpat 
+                                    ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                    o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                     Integer enim neque volutpat 
+                                    ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                </div>
+                                <div class="reply-comment-section">
+                                    <a class="btn" onclick="addCommentSection(this)"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <div class="comment-reply-container">
+                                    <div>
                                         <div class="commentor-info push-left">
                                             <div class="commentor-profile add-border-avatar">
                                                 <a href="#commentor-account">
-                                                    <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                                    <img src="../media/profile4.jpg" alt="commentpr-avatar">
                                                 </a>
                                             </div>
                                             <div class="commentor-name">
@@ -450,34 +455,64 @@
                                             ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
                                         </div>
                                         <div class="reply-comment-section">
-                                            <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                                            <a class="btn" onclick="addCommentSection(this)"><i class="fa fa-reply"></i> Reply</a>
+                                        </div>
+                                    </div>
+                                    <!--third reply-->
+                                    <div class="comment-reply-container">
+                                        <div>
+                                            <div class="commentor-info push-left">
+                                                <div class="commentor-profile add-border-avatar">
+                                                    <a href="#commentor-account">
+                                                        <img src="../media/profile2.jpg" alt="commentpr-avatar">
+                                                    </a>
+                                                </div>
+                                                <div class="commentor-name">
+                                                    <a href="#commentor-account">name family name</a>
+                                                </div>
+                                            </div>
+                                            <div class="commentor-comment">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                                 Integer enim neque volutpat 
+                                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                                 Integer enim neque volutpat 
+                                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                            </div>
+                                            <div class="reply-comment-section" >
+                                                <a class="btn"  onclick="addCommentSection(this)"><i class="fa fa-reply"></i> Reply</a>
+                                            </div>
                                         </div>
                                     </div>
                         </div>  
-                        <!--this section add a new comment part-->
+                        <!--this section adds a new comment part-->
                         <div class="original-comment-container">
-                            <div class="commentor-info push-left">
-                                <div class="commentor-profile add-border-avatar">
-                                    <a href="#commentor-account">
-                                        <img src="../media/profile3.jpg" alt="commentpr-avatar">
-                                    </a>
+                            <div>
+                                <div class="commentor-info push-left">
+                                    <div class="commentor-profile add-border-avatar">
+                                        <a href="#commentor-account">
+                                            <img src="../media/profile3.jpg" alt="commentpr-avatar">
+                                        </a>
+                                    </div>
+                                    <div class="commentor-name">
+                                        <a href="#commentor-account">name family-name</a>
+                                    </div>
                                 </div>
-                                <div class="commentor-name">
-                                    <a href="#commentor-account">name family name</a>
+                                <div class="commentor-comment">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                    o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                     Integer enim neque volutpat 
+                                    ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
+                                    o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
+                                     Integer enim neque volutpat 
+                                    ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
                                 </div>
-                            </div>
-                            <div class="commentor-comment">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
-                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
-                                 Integer enim neque volutpat 
-                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed d
-                                o eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque ornare aenean euismod elementum nisi.
-                                 Integer enim neque volutpat 
-                                ac tincidunt vitae semper quis lectus. Arcu dictum varius duis at consectetur lorem.
-                            </div>
-                            <div class="reply-comment-section">
-                                <button class="btn"><i class="fa fa-reply"></i> Reply</button>
+                                <div class="reply-comment-section">
+                                    <a class="btn" onclick="addCommentSection(this)"><i class="fa fa-reply"></i> Reply</a>
+                                </div>
                             </div>
                         </div>
                     </div>
