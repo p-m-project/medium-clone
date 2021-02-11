@@ -5,18 +5,19 @@
 }
 
 .profile-left{
-    grid-column: 2/span 4;
+    grid-column: 2/span 2;
     position: relative;
 }
 
-/* .profile-right{
-    grid-column: 2/span 4;
+.profile-right{
+    grid-column: 2/span 2;
     position: relative;
-} */
+}
 .profile{
     padding-left: 7em;
     padding-right: 7em;
     padding-top: 1em;
+    grid-column: 4/span 6;
 }
 .profile-about{
     border-bottom: 1px solid #ccc;
