@@ -19,8 +19,10 @@
     padding-top: 1em;
     grid-column: 4/span 6;
 }
-.profile-about{
+.profile-about label{
     border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .profile-about h1{
