@@ -45,10 +45,6 @@
 }
 
 
-.profile-name{
-    margin: 2em 0 2em;
-}
-
 .profile-name input{
     border: 1px solid #ccc;
     margin-top: 1em;
@@ -56,19 +52,12 @@
 }
 
 
-.profile-username{
-    margin: 2em 0 2em;
-}
-
 .profile-username input{
     border: 1px solid #ccc;
     margin-top: 1em;
     border-radius: 10px;
 }
 
-.profile-bio{
-    margin: 2em 0 2em;
-}
 
 .profile-bio input{
     border: 1px solid #ccc;
@@ -76,9 +65,6 @@
     border-radius: 10px;
 }
 
-.profile-gmail{
-    margin: 3em 0 3em;
-}
 
 .profile-gmail input{
     border: 1px solid #ccc;
@@ -93,7 +79,7 @@
 }
 
 .security-password{
-    margin: 2em 0 2em;
+    margin: 2em 0 0;
 }
 
 .security-password input{
@@ -102,10 +88,6 @@
     border-radius: 10px;
 }
 
-
-.security-new-password{
-    margin: 2em 0 2em;
-}
 
 .security-new-password input{
     border: 1px solid #ccc;
