@@ -1,10 +1,32 @@
+.all-part-profile{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+}
+
+.profile-left{
+    grid-column: 2/span 2;
+    position: relative;
+}
+
+.profile-right{
+    grid-column: 2/span 2;
+    position: relative;
+}
 .profile{
     padding-left: 7em;
     padding-right: 7em;
     padding-top: 1em;
+    grid-column: 4/span 6;
 }
+
 .profile-about{
     border-bottom: 1px solid #ccc;
+}
+
+.profile-about label{
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .profile-about h1{
@@ -25,9 +47,6 @@
     margin-bottom: 1em;
 }
 
-.profile-name{
-    border-top: 1px solid #ccc;
-}
 
 .profile-name p{
     margin-top: 1em;
@@ -38,9 +57,6 @@
     margin-top: .5em;
 }
 
-.profile-username{
-    border-top: 1px solid #ccc;
-}
 
 .profile-username p{
     margin-top: 1em;
@@ -49,10 +65,6 @@
 .profile-username input{
     border: 1px solid;
     margin-top: .5em;
-}
-
-.profile-bio{
-    border-top: 1px solid #ccc;
 }
 
 .profile-bio p{
@@ -64,10 +76,6 @@
     margin-top: .5em;
 }
 
-.profile-gmail{
-    border-top: 1px solid #ccc;
-}
-
 .profile-gmail p{
     margin-top: 1em;
 }
@@ -77,13 +85,9 @@
     margin-top: .5em;
 }
 
-/* .security{
-    border-top: 1px solid #ccc;
-} */
-
-.security h1{
-    margin-top: .5em;
-    margin-bottom: 1em;
+.security label{
+    font-weight: bold;
+    font-size: 2em;
 }
 
 .security-password{
@@ -99,9 +103,6 @@
     margin-top: .5em;
 }
 
-.security-new-password{
-    border-top: 1px solid #ccc;
-}
 
 .security-new-password p{
     margin-top: 1em;
@@ -112,10 +113,6 @@
     margin-top: .5em;
 }
 
-.security-coin-frame-new{
-    border-top: 1px solid #ccc;
-}
-
 .security-coin-frame-new p{
     margin-top: 1em;
 }
@@ -123,6 +120,14 @@
 .security-coin-frame-new input{
     border: 1px solid;
     margin-top: .5em;
+}
+
+.save{
+    text-align: right;
+    height: 34px;
+    position: relative;
+    bottom: -17px;
+    margin-right: 10%;
 }
 @media screen and (min-width:320px) and (max-width:768px){
     .profile{
