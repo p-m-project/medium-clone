@@ -144,6 +144,13 @@
     margin-right: 10%;
 }
 
+.save button{
+    width: 7em;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 50px;
+}
+
 .btn1[type=text] {
     width: 100px;
     -webkit-transition: width .35s ease-in-out;
@@ -157,19 +164,6 @@
     }
 }
 
-/* 
-@media only screen and (min-width:320px){
-    .profile-name input{
-        width: 179px;
-    }
-}
-
-@media only screen and (max-width:768px)
-{
-    .profile-name input{
-        width: 351px;
-    }
-} */
 
    
 
