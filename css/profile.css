@@ -44,6 +44,10 @@
     margin-bottom: 1em;
 }
 
+.profile-name{
+    margin-top: 1em;
+}
+
 .profile-name label{
     font-weight: bold;
 }
