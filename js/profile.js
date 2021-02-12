@@ -14,3 +14,4 @@ function readURL(input) {
     readURL(this);
   });
 
+//   *********************part periview image
