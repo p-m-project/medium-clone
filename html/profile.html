@@ -71,16 +71,10 @@
         </div>
 
         <div class="profile-image">
-            <a href="#">
-                <img src="../media/post.jpg" alt="">
-                <a href="#" title="upload*video">
-                    <label for="video-input">
-                        <i class="fa*fa-video-camera">
-                        </i>
-                        <input type="file" id="image-input" name="image-input" accept="image/*">
-                    </label>
-                </a>
-            </a>
+            <form runat="server">
+            <input type='file' id="imgInp" />
+            <img id="blah" src="../media/post3.jpg" alt="your image" />
+            </form>
         </div>
 
         <div class="profile-name">
@@ -133,6 +127,7 @@
 
     
     <script src="../js/nav.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="../js/profile.js"></script>
 </body>
 </html>

@@ -1,10 +1,16 @@
-
-
-
-thumbnailElement.src = URL.createObjectURL(thumbnail.target.files[0]);
-    thumbnailElement.onload = function() {
-    URL.revokeObjectURL(thumbnailElement.src) 
-    } 
-    // هر پارت رو تعریف کنم
-    // المان رو باید هدف قرار بدم
+function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+        $('#blah').attr('src', e.target.result);
+      }
+      
+      reader.readAsDataURL(input.files[0]); 
+    }
+  }
+  
+  $("#imgInp").change(function() {
+    readURL(this);
+  });
 

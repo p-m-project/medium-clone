@@ -96,6 +96,8 @@
 .security{
     height: 40px;
     border-bottom: 1px solid #ccc;
+    margin-top: 5em;
+
 }
 
 .security-password{
@@ -151,5 +153,11 @@
     width: 250px;
   }
    
+  img{
+    max-width:180px;
+  }
+  input[type=file]{
+  padding:10px;
+  }
 
 
