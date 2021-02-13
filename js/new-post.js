@@ -19,6 +19,7 @@ function loadThumbnail(thumbnail){
     thumbnailElement.style.cursor="pointer";
     thumbnailElement.setAttribute("contenteditable","true");
     thumbnailElement.setAttribute("onclick","deleteMedia(this)");
+    thumbnailElement.setAttribute("tabindex","1");
         /*add a img tag after the current p element */
         thc.parentNode.insertBefore(thumbnailElement,thc.nextSibling );
     thumbnailElement.src = URL.createObjectURL(thumbnail.target.files[0]);
@@ -129,16 +130,7 @@ function toggleAddMedia(){
         document.querySelector(".add-media-section").style.display="none";
     }
 }
-function deleteMedia(media){   
-    media.addEventListener("keydown", (e4)=>{
-        if(e4.keyCode===8 || e4.keyCode===46){
-                        /*media.previousElementSibling.focus();
-                        document.getElementById("txt").focus();   */
 
-            media.remove();
-        }
-    })
-}
 
 function loadImage(img){
     document.querySelector(".add-media-section").style.display="none";
@@ -150,6 +142,7 @@ function loadImage(img){
     imageElement.style.marginBottom="21px";
     imageElement.style.cursor="pointer";
     imageElement.setAttribute("contenteditable","true");
+    imageElement.setAttribute("tabindex","1");
     imageElement.setAttribute("onclick","deleteMedia(this)");
     /*add a img tag after the current p element */
     txt.parentNode.insertBefore(imageElement,txt.nextSibling );
@@ -176,6 +169,7 @@ function loadVideo(video){
     videoElement.setAttribute("contenteditable","true");
     videoElement.setAttribute("onclick","deleteMedia(this)");
     videoElement.setAttribute("controls","on");
+    videoElement.setAttribute("tabindex","1");
         /*add a video tag after the current p element */
     txt.parentNode.insertBefore(videoElement,txt.nextSibling );
     let pElement= document.createElement("p");
@@ -187,6 +181,17 @@ function loadVideo(video){
     videoElement.onload = function() {
     URL.revokeObjectURL(videoElement.src) 
     } 
+}
+function deleteMedia(media){ 
+    media.addEventListener("keydown", (e4)=>{
+        console.log('kecode==8');
+        if(e4.keyCode===8 || e4.keyCode===46){
+                        /*media.previousElementSibling.focus();
+                        document.getElementById("txt").focus();   */
+         media.remove();          
+        }
+  })
+
 }
 
 document.querySelector('.save-btn').addEventListener("click", ()=>
