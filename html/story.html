@@ -6,10 +6,10 @@
     <title>story title</title>
     <meta name="keyword" content="">
     <meta name="description" content="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/story.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../js/nav.js" defer></script>
 
 </head>
@@ -158,6 +158,9 @@
                          Tellus pellentesque eu tincidunt tortor aliquam nulla.
                           Neque viverra justo nec ultrices.
                     </p>
+                </div>
+                <div class="post-end-category">
+                    Category: <a class="category-btn" href="#category">Nature</a>
                 </div>
                 <div class="post-end-social">   
                     <div class="post-share-buttons">
@@ -347,13 +350,22 @@
         <section class="comment-footer-background-section">
             <div class="comments-container" id="comments">
                 <div class="display-comment-numbers">Comments <span class="comment-numbers">4</span></div>
+                <!--if user is not signed in:-->
+                <div class="signin-to-comment">
+                    <div class="signin-to-comment-options">
+                        <div class="alarm-icon">
+                            <i class="fa fa-warning"></i>
+                        </div>
+                        <div class="signin-warning">
+                            Please <a href="signin-page.html">sign in</a> to comment on this post
+                        </div>
+                    </div>
+                </div>
                 <div class="new-comment-container">
                     <div class="new-comment-textbox">
                         <textarea  rows="5" placeholder="What is in your thought?" class="new-comment-textarea" id="comment-textarea"></textarea>
                     </div>
                     <div class="new-comment-options">
-                        <!--if user wasn't signed in, display this:-->
-                        <div class="add-commentor-info"></div>
                         <!--if user was signed in display this:-->
                         <div class="info-submit" style="display: none;">
                             <div class="commentor-info">
@@ -368,7 +380,7 @@
                             </div>
 
                             <div class="post-comment-btn">
-                                <button class="btn btn-submit">Submit comment</button>
+                                <button class="btn btn-submit" onclick="addLoader(this)">Submit comment</button>
                             </div>
                         </div>
                         

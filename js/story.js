@@ -1,6 +1,11 @@
+let loader =`<i class="fa fa-spinner fa-spin"></i>`;
 document.querySelector(".new-comment-textarea").addEventListener("focus", ()=>{
     document.querySelector('.info-submit').style.display="flex";
-})
+});
+function addLoader(e4){
+    e4.innerHTML=loader;
+}
+
 function makeChecked(){
     if(document.querySelector('.post-writer-name').querySelector('.btn-follow-icon').innerHTML==`<i class="fa fa-check" aria-hidden="true"></i>`
     || document.querySelector('.post-writer-follow').querySelector('.btn-follow-icon').innerHTML==`<i class="fa fa-check" aria-hidden="true"></i>`
