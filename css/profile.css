@@ -34,6 +34,7 @@
     width: 100px;
     border-radius: 50px;
     height: 100px;
+    margin: .5em 0;
 }
 
 .profile-image{
@@ -125,11 +126,11 @@
     width: 100%;
 }
 
-.security-coin-frame-new label{
+.security-confirm-new-password label{
     font-weight: bold;
 }
 
-.security-coin-frame-new input{
+.security-confirm-new-password input{
     border: 1px solid #ccc;
     margin-top: 1em;
     border-radius: 10px;
@@ -140,7 +141,7 @@
     text-align: right;
     height: 34px;
     position: relative;
-    bottom: -17px;
+    margin-bottom: 2em;
     margin-right: 10%;
 }
 
@@ -163,6 +164,23 @@
         padding-right: 3em;
     }
 }
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .profile-image img {
+        width: 80px;
+        border-radius: 50px;
+        height: 80px;
+        margin-top: .5em;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .profile-image {
+        margin: 2em 0 0;
+    }
+}
+
+
 
 
    
