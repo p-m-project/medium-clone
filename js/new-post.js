@@ -28,6 +28,35 @@ function loadThumbnail(thumbnail){
     } 
 }
 
+/*function countWords(){
+    function numbers(){
+        let getWords=document.querySelector('.new-post-container').innerHTML.toString.split(" ");
+        if(getWords.length>60){
+            return 2.5
+        }
+        else return 1
+    };
+    document.getElementById('post-words').innerHTML= numbers();
+}*/
+function countWords(){
+    function numbers(){
+       // let getWords=document.querySelector('.new-post-container').innerHTML.toString.split(" ");
+        if(getWords.length>60){
+            return 2.5
+        }
+        else return 1
+    };
+    let nums=0;
+    let getWords=document.querySelectorAll('.new-post-passage');
+    for(var i=0;i<getWords.length;i++){
+       nums+= getWords[i].innerHTML.split(/\S+/g).length;
+    }
+    let awpm=200;
+    let awps=awpm/60;
+    let ws=nums/awps;
+    let wm=ws/60;
+    document.getElementById('post-words').innerHTML= `${wm} Min`;
+}
 
 function nextElem(er){
     er.addEventListener("keydown",(e)=>{      
