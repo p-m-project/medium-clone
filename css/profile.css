@@ -34,6 +34,7 @@
     width: 100px;
     border-radius: 50px;
     height: 100px;
+    margin: .5em 0;
 }
 
 .profile-image{
@@ -163,6 +164,23 @@
         padding-right: 3em;
     }
 }
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .profile-image img {
+        width: 80px;
+        border-radius: 50px;
+        height: 80px;
+        margin-top: .5em;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:768px){
+    .profile-image {
+        margin: 2em 0 0;
+    }
+}
+
+
 
 
    
