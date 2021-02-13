@@ -125,11 +125,11 @@
     width: 100%;
 }
 
-.security-coin-frame-new label{
+.security-confirm-new-password label{
     font-weight: bold;
 }
 
-.security-coin-frame-new input{
+.security-confirm-new-password input{
     border: 1px solid #ccc;
     margin-top: 1em;
     border-radius: 10px;
