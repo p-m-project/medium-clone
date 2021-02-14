@@ -179,8 +179,22 @@
         margin: 2em 0 0;
     }
 }
-
-
+/* ***************** responsive input */
+@media screen and (max-width:320px){
+    .security-confirm-new-password {
+        width:12em;
+        }
+    
+    @media screen and (min-width:320px) and (max-width:600px){
+        .security-confirm-new-password {
+            width:15em;
+        }
+    
+    @media screen (min-width:600){
+        .security-confirm-new-password {
+            width:100%;
+        }
+/* ***************** responsive input */
 
 
    
