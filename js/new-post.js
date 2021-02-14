@@ -19,6 +19,7 @@ function loadThumbnail(thumbnail){
     thumbnailElement.style.cursor="pointer";
     thumbnailElement.setAttribute("contenteditable","true");
     thumbnailElement.setAttribute("onclick","deleteMedia(this)");
+    thumbnailElement.setAttribute("tabindex","1");
         /*add a img tag after the current p element */
         thc.parentNode.insertBefore(thumbnailElement,thc.nextSibling );
     thumbnailElement.src = URL.createObjectURL(thumbnail.target.files[0]);
@@ -27,6 +28,35 @@ function loadThumbnail(thumbnail){
     } 
 }
 
+/*function countWords(){
+    function numbers(){
+        let getWords=document.querySelector('.new-post-container').innerHTML.toString.split(" ");
+        if(getWords.length>60){
+            return 2.5
+        }
+        else return 1
+    };
+    document.getElementById('post-words').innerHTML= numbers();
+}*/
+function countWords(){
+    function numbers(){
+       // let getWords=document.querySelector('.new-post-container').innerHTML.toString.split(" ");
+        if(getWords.length>60){
+            return 2.5
+        }
+        else return 1
+    };
+    let nums=0;
+    let getWords=document.querySelectorAll('.new-post-passage');
+    for(var i=0;i<getWords.length;i++){
+       nums+= getWords[i].innerHTML.split(/\S+/g).length;
+    }
+    let awpm=200;
+    let awps=awpm/60;
+    let ws=nums/awps;
+    let wm=ws/60;
+    document.getElementById('post-words').innerHTML= `${wm} Min`;
+}
 
 function nextElem(er){
     er.addEventListener("keydown",(e)=>{      
@@ -129,16 +159,7 @@ function toggleAddMedia(){
         document.querySelector(".add-media-section").style.display="none";
     }
 }
-function deleteMedia(media){   
-    media.addEventListener("keydown", (e4)=>{
-        if(e4.keyCode===8 || e4.keyCode===46){
-                        /*media.previousElementSibling.focus();
-                        document.getElementById("txt").focus();   */
 
-            media.remove();
-        }
-    })
-}
 
 function loadImage(img){
     document.querySelector(".add-media-section").style.display="none";
@@ -150,6 +171,7 @@ function loadImage(img){
     imageElement.style.marginBottom="21px";
     imageElement.style.cursor="pointer";
     imageElement.setAttribute("contenteditable","true");
+    imageElement.setAttribute("tabindex","1");
     imageElement.setAttribute("onclick","deleteMedia(this)");
     /*add a img tag after the current p element */
     txt.parentNode.insertBefore(imageElement,txt.nextSibling );
@@ -176,6 +198,7 @@ function loadVideo(video){
     videoElement.setAttribute("contenteditable","true");
     videoElement.setAttribute("onclick","deleteMedia(this)");
     videoElement.setAttribute("controls","on");
+    videoElement.setAttribute("tabindex","1");
         /*add a video tag after the current p element */
     txt.parentNode.insertBefore(videoElement,txt.nextSibling );
     let pElement= document.createElement("p");
@@ -187,6 +210,17 @@ function loadVideo(video){
     videoElement.onload = function() {
     URL.revokeObjectURL(videoElement.src) 
     } 
+}
+function deleteMedia(media){ 
+    media.addEventListener("keydown", (e4)=>{
+        console.log('kecode==8');
+        if(e4.keyCode===8 || e4.keyCode===46){
+                        /*media.previousElementSibling.focus();
+                        document.getElementById("txt").focus();   */
+         media.remove();          
+        }
+  })
+
 }
 
 document.querySelector('.save-btn').addEventListener("click", ()=>

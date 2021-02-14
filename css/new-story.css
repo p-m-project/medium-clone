@@ -131,6 +131,25 @@ b{
     font-size: 13rem;
     opacity: .3;
 }
+.post-words-div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+}
+.post-words-div div{
+    font-size: 21px;
+    font-weight: bold;
+    color: slategrey;
+    padding-bottom: .8rem;
+}
+.number-div{
+    width:150px;
+    padding-top:10px;
+}
+.post-words-div .btn{
+    margin-bottom: 0;
+}
 
 .new-post-section .new-post-passage, .new-post-section .new-post-title, .new-post-section .new-post-h3{
     border:solid 1px rgba(255, 105, 180,.3);
