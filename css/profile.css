@@ -181,19 +181,131 @@
 }
 /* ***************** responsive input */
 @media screen and (max-width:320px){
+    .profile-name{
+        width:12em;
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:600px){
+.profile-name {
+    width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .profile-name {
+        width:100%;
+    }
+}
+
+  /* ****************************1 */
+  @media screen and (max-width:320px){
+    .profile-username{
+        width:12em;
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:600px){
+.profile-username {
+    width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .profile-username {
+        width:100%;
+    }
+}
+  /* ****************************2 */
+  @media screen and (max-width:320px){
+    .profile-bio{
+        width:12em;
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:600px){
+.profile-bio {
+    width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .profile-bio {
+        width:100%;
+    }
+}
+  /* ****************************3 */
+  @media screen and (max-width:320px){
+    .profile-gmail{
+        width:12em;
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:600px){
+.profile-gmail {
+    width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .profile-gmail {
+        width:100%;
+    }
+}
+  /* ****************************4 */
+  @media screen and (max-width:320px){
+    .security-password{
+        width:12em;
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:600px){
+    .security-password {
+    width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .security-password {
+        width:100%;
+    }
+}
+  /* ****************************5 */
+  @media screen and (max-width:320px){
+    .security-new-password{
+        width:12em;
+    }
+  }
+
+@media screen and (min-width:320px) and (max-width:600px){
+    .security-new-password {
+    width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .security-new-password {
+        width:100%;
+    }
+}
+  /* ****************************6 */
+@media screen and (max-width:320px){
     .security-confirm-new-password {
         width:12em;
         }
-    
-    @media screen and (min-width:320px) and (max-width:600px){
-        .security-confirm-new-password {
-            width:15em;
-        }
-    
-    @media screen (min-width:600){
-        .security-confirm-new-password {
-            width:100%;
-        }
+    }
+@media screen and (min-width:320px) and (max-width:600px){
+    .security-confirm-new-password {
+        width:13em;
+    }
+}
+
+@media screen and (min-width:600px){
+    .security-confirm-new-password {
+        width:100%;
+    }
+}
+
 /* ***************** responsive input */
 
 
