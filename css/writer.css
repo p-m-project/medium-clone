@@ -20,6 +20,74 @@
 }
 .article-section{
     width: 20vw;
-    height:20vw ;
+    height:27vw ;
     margin: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    -ms-flex-direction:column;
+    overflow: hidden;
+}
+.article-section-title{
+    height: calc(100% - 88.1482%);
+    margin-bottom: 0.4vw;
+}
+/*------------------- define a responsive font-size--------------------- */
+.article-section-title h2{
+    font-size: 1.3rem;
+    line-height: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.article-section-picture{
+   /* height: 15.33vw;*/
+   height: calc(100% - 44.33%);
+}
+.article-section-picture a img{
+    width: 100%;
+    height: 100%;  
+    border-radius: 10px;
+
+}
+.article-section-excerpt{
+    margin-top: .3vw;
+    color: rgba(117, 117, 117, 1);
+    font-size: 1.13vw;
+    line-height: 1.3vw;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /*height: 4.82vw;*/
+    height: calc(100% - 82.1882%);
+    overflow: hidden;
+
+}
+.make-shadow{
+    height: .6vw;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0 -0.4vw 0.81vw 0.2vw white;
+}
+.article-section-save-like{
+    display: flex;
+    flex-direction: row;
+    height:calc(100% - 94.7%);
+    margin: 0 0 3.7037 0;
+    z-index: 2;
+    background-color: white;
+
+}
+.article-section-save-like i{
+    font-size: 1.4vw;
+}
+@media screen and (max-width:680px){
+    .writer-Articles{
+        grid-template-columns: 1fr 4fr;
+    }
+    .article-section{
+    width: 35vw;
+    height: 49vw;
+    margin:0 2.1vw;
+    }
 }
