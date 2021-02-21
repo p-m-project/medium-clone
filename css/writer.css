@@ -8,24 +8,30 @@
 .number-Article{
     grid-column: 1/2;
     grid-row: 1/2;
+    
+}
+.number-article-section{
     position: sticky;
-    top:12px;
+    top:20px;
 }
 .articles{
     grid-column: 2/3;
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
-    justify-content: flex-start;
+    justify-content: center;
 }
 .article-section{
     width: 20vw;
     height:27vw ;
-    margin: 0 2vw;
+    margin: 1vw ;
+    padding: 1vw ;
     display: flex;
     flex-direction: column;
     -ms-flex-direction:column;
     overflow: hidden;
+    box-shadow: 0 0 .5vw .2vw rgb(216, 216, 216);
+    
 }
 .article-section-title{
     height: calc(100% - 88.1482%);
@@ -33,8 +39,8 @@
 }
 /*------------------- define a responsive font-size--------------------- */
 .article-section-title h2{
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 1.5vw;
+    line-height:1.6vw;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -53,7 +59,7 @@
 .article-section-excerpt{
     margin-top: .3vw;
     color: rgba(117, 117, 117, 1);
-    font-size: 1.13vw;
+    font-size: 1.2vw;
     line-height: 1.3vw;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -61,8 +67,8 @@
     /*height: 4.82vw;*/
     height: calc(100% - 82.1882%);
     overflow: hidden;
-
 }
+
 .make-shadow{
     height: .6vw;
     width: 100%;
@@ -81,13 +87,80 @@
 .article-section-save-like i{
     font-size: 1.4vw;
 }
-@media screen and (max-width:680px){
+@media screen and (min-width:680px) and (max-width:800px){
+    .article-section-excerpt{
+        font-size: 1.8vw;
+        line-height: 2vw;
+    }
+    .article-section-save-like i {
+        font-size: 1.4vw;
+    }
+}
+@media screen and (min-width:600px) and (max-width:680px){
     .writer-Articles{
-        grid-template-columns: 1fr 4fr;
+       grid-template-columns: 1fr 4fr;
     }
     .article-section{
     width: 35vw;
     height: 49vw;
-    margin:0 2.1vw;
+    margin: 1.5vw;
+    }
+    .article-section-title h2{
+    font-size: 2.5vw;
+    line-height: 2.6vw;
+    }
+    .article-section-excerpt{
+        font-size: 2vw;
+        line-height: 2.2vw;
+    }
+    .article-section-save-like i {
+        font-size: 2.4vw;
+    }
+}
+
+@media screen and (max-width:600px){
+    .writer-Articles{
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(2,auto);
+    }
+    .number-Article, .articles{
+        grid-column: 2/8;   
+    }
+    .number-Article{
+        grid-row: 1/2;
+    }
+    .number-article-section{
+        position: static;
+    }
+    .articles{
+        grid-row: 2/3;
+    }
+    .article-section{
+    width:71.5vw;
+    height: 99vw;
+    margin:2.1vw 0;
+    box-shadow: 0 0 0.9vw 0.6vw rgb(216 216 216);
+    }
+
+    .article-section-title h2{
+    font-size: 4.5vw;
+     line-height: 4.6vw;
+        }
+    .article-section-excerpt{
+    font-size: 3.5vw;
+    line-height: 3.8vw;
+        }
+    .make-shadow{
+        height: 2.6vw;
+    box-shadow: 0 -2.4vw 3.81vw 2.2vw white;    
+    }
+    .article-section-save-like i {
+    font-size: 4vw;
+    }
+}
+@media screen and (max-width:400px){
+    .article-section-save-like i {
+    font-size: 5vw;
     }
 }
