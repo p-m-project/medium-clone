@@ -308,7 +308,11 @@
 
 /* ***************** responsive input */
 
-
+@media screen and (min-width:320px){
+    #imgInp{
+        font-size: 6px;
+    }
+  }
    
 
 
