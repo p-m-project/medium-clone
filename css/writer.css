@@ -34,7 +34,7 @@
     
 }
 .article-section-title{
-    height: calc(100% - 88.1482%);
+    height: calc(100% - 85.1482%);
     margin-bottom: 0.4vw;
 }
 /*------------------- define a responsive font-size--------------------- */
@@ -48,7 +48,7 @@
 }
 .article-section-picture{
    /* height: 15.33vw;*/
-   height: calc(100% - 44.33%);
+   height: calc(100% - 47.33%);
 }
 .article-section-picture a img{
     width: 100%;
