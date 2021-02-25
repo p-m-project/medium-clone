@@ -38,6 +38,18 @@
     text-align: center;
     border-radius: 50px;
 }
+.button-writer{
+    padding: 18px 37px;
+    border-radius: 30px;
+}
+
+#writer-save{
+    margin-right: .5em;
+}
+
+#writer-icon{
+    font-size: 10px;
+}
 
 @media screen and (max-width:768px){
     .profile{
