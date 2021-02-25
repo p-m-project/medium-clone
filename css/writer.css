@@ -4,6 +4,8 @@
     flex-direction: row-reverse;
     margin: 0 64px;
     padding: 30px 0;
+    background-color: #804224;
+    color: #fff;
 }
 
 .writer-img img{
@@ -15,6 +17,9 @@
 
 .writer-text{
     margin: 14px;
+}
+.writer-text h3{
+    margin-bottom: 5px;
 }
 
 .writer-follow{
@@ -32,6 +37,12 @@
     padding-top: 25px;
     text-align: center;
     border-radius: 50px;
+}
+
+@media screen and (max-width:768px){
+    .profile{
+        margin: 0;
+    }
 }
 /* ************************************************parasto */
 .writer-Articles{
