@@ -16,7 +16,7 @@ body{
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
-  height:650px;
+  min-height: calc(100vh - 72px);
   background-image: url('../media/header.jpg') ;
   background-position: bottom right;
   background-size: cover;
