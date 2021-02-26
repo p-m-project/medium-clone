@@ -61,6 +61,13 @@
     margin-left: 5em;
 }
 
+.article-section-save-like{
+    display: flex;
+    flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+}
 /* ************************************************parasto */
 .writer-Articles{
     display: grid;
