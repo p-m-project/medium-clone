@@ -2,7 +2,7 @@
 .profile{
     display: flex;
     flex-direction: row-reverse;
-    margin: 0 64px;
+    width: 100%;
     padding: 30px 0;
     background-color: #804224;
     color: #fff;
