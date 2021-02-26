@@ -7,40 +7,59 @@ body{
 .wrapper{
   max-width: 90vw;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .homepage-header{
   display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: center;
-  height:400px;
-  background-color: indigo;
+  justify-content: flex-start;
   align-content: center;
+  min-height: calc(100vh - 72px);
+  background-image: url('../media/header.jpg') ;
+  background-position: bottom right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: border-box;
+  background-clip: border-box;
+  padding-right: 10%;
 }
 .homepage-header-container{
-  min-width: 250px;
+  font-family: cursive;
+  min-width:150px;
   max-width: 550px;
-  margin: 0 auto;
+  margin:6%  0 0 10%;
   height: 400px;
   display: flex;
   flex-flow: column wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-content: center;
 }
 
 .homepage-header-container h1{
-  font-size: 50px;
+  font-size: 4rem;
+  font-family: inherit;
   color: #f1f2f6;
   text-transform: uppercase;
-  line-height: 2em;
+  line-height: 6rem;
 }
 
 .homepage-header-container button{
-  max-width: 250px;
-  margin: 0 auto;
-
+  display: block;
+  font-family: inherit;
+  max-width: max-content;
+  padding: 1rem;
+  margin-top: 6%;
+  margin-bottom: 0;
 }
-
+@media screen and (max-width:850px){
+  .homepage-header-container h1{
+    font-size:7vw;
+    line-height: 10vw;
+    text-overflow: ellipsis;
+  }
+}
 /*favorite posts teeeest start */
 .favorite-posts-section-title{
   display: block;
@@ -475,14 +494,16 @@ font-size: 1.1em;
 .seperator{
   padding: 0 6px;
 }
-.post-save a i.fa-save:link ,.post-save a i.fa-save:visited {
-  color: green;
+.post-save a i.fa-save{
+  color: inherit;
+  transition: .5s ease-in-out;
 }
 .post-save a i.fa-save:hover{
-  color:black;
+  color:rgba(0, 0, 0, .4);
 }
 .post-save a i.fa-save:active{
-  color:rgba(104, 74, 148, 1);
+  color:black;
+  transform: scale(1.5);
 }
 .post-picture{
   align-self: center;
