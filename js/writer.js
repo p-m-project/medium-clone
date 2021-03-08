@@ -1,3 +1,18 @@
+let hearts = document.querySelectorAll('.fa-heart-o');
+for(var i=0;i<hearts.length;i++){
+    hearts[i].addEventListener('click',function(e1){
+        if(e1.target.style.color==="red"){
+           e1.target.style.color="";
+           parseInt( e1.target.nextElementSibling.innerHTML)-=1;
+
+        }
+        else{
+            e1.target.style.color="red";
+            parseInt( e1.target.nextElementSibling.innerHTML)+=1;
+        }
+
+    })
+}
 function makeChecked(){
     if(document.querySelector('.post-writer-name').querySelector('.btn-follow-icon').innerHTML==`<i class="fa fa-check" aria-hidden="true"></i>`
     || document.querySelector('.post-writer-follow').querySelector('.btn-follow-icon').innerHTML==`<i class="fa fa-check" aria-hidden="true"></i>`
@@ -14,12 +29,12 @@ function makeChecked(){
 
 }
 
-function makeRed(){
+/*function makeRed(){
     let hearts = document.querySelectorAll('.fa-heart-o');
     for(var i=0;i<=hearts.length;i++){
         hearts[i].style.color==="red"? hearts[i].style.color="":hearts[i].style.color="red";
     }
-}
+}*/
 function makeBlack(){
     let saves = document.querySelector(".main").querySelectorAll('.fa-save');
     for(var i=0;i<=saves.length;i++){
