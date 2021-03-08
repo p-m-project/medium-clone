@@ -304,3 +304,18 @@ background-color: #AEBAB1;
         margin-right:4.25em; 
    } 
   }
+
+
+  @media only screen and (max-width: 320px) {
+    .number-article-section h2 {
+        font-size: 2em;
+        padding: 1em;
+   } 
+  }
+
+  @media only screen and (min-width: 375px) {
+    .number-article-section h2 {
+        font-size: 2em;
+        padding: 1em;
+   } 
+  }
