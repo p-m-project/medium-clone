@@ -25,7 +25,14 @@ function makeChecked(){
 function makeRed(){
     let hearts = document.querySelectorAll('.fa-heart-o');
     for(var i=0;i<=hearts.length;i++){
-        hearts[i].style.color==="red"? hearts[i].style.color="":hearts[i].style.color="red";
+        if(hearts[i].style.color==="red"){
+            hearts[i].style.color="";
+            hearts[i].nextElementSibling.innerHTML=parseInt(hearts[i].nextElementSibling.innerHTML)-1;
+         }
+         else{
+            hearts[i].style.color="red";
+             hearts[i].nextElementSibling.innerHTML=parseInt(hearts[i].nextElementSibling.innerHTML)+1;
+         }
     }
 }
 function makeBlack(){

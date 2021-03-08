@@ -3,14 +3,12 @@ for(var i=0;i<hearts.length;i++){
     hearts[i].addEventListener('click',function(e1){
         if(e1.target.style.color==="red"){
            e1.target.style.color="";
-           parseInt( e1.target.nextElementSibling.innerHTML)-=1;
-
+           e1.target.nextElementSibling.innerHTML=parseInt(e1.target.nextElementSibling.innerHTML)-1;
         }
         else{
             e1.target.style.color="red";
-            parseInt( e1.target.nextElementSibling.innerHTML)+=1;
+            e1.target.nextElementSibling.innerHTML=parseInt(e1.target.nextElementSibling.innerHTML)+1;
         }
-
     })
 }
 function makeChecked(){
@@ -29,18 +27,9 @@ function makeChecked(){
 
 }
 
-/*function makeRed(){
-    let hearts = document.querySelectorAll('.fa-heart-o');
-    for(var i=0;i<=hearts.length;i++){
-        hearts[i].style.color==="red"? hearts[i].style.color="":hearts[i].style.color="red";
-    }
-}*/
 function makeBlack(){
-    let saves = document.querySelector(".main").querySelectorAll('.fa-save');
-    for(var i=0;i<=saves.length;i++){
+    let saves = document.querySelectorAll('.fa-save');
+    for(var i=0;i<saves.length;i++){
         saves[i].style.color==="black"? saves[i].style.color="":saves[i].style.color="black";
-      /* 
-        saves[i].style.color="black"? saves[i].style.color="":saves[i].style.color="black";
-      */
 }
 }

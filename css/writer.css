@@ -29,11 +29,21 @@
 .writer-text p{
     line-height: 1.5;
 }
-
-.sidebar-cells a.fa.fa-comment-o:active {
-    color: rgba(0, 128, 0, .7);
-    transform: scale(1.5);
+.sidebar-cells .fa{
+    color: rgba(0, 0, 0, .7);
+    transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -o-transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -moz-transition: color .2s ease-in-out, transform .5s ease-in-out;
+    -webkit-transition: color .2s ease-in-out, transform .5s ease-in-out;
 }
+.sidebar-cells a.fa:hover {
+    color: rgba(0, 0, 0, .5);
+}
+.sidebar-cells a.fa:active {
+    transform: scale(2);
+}
+
+
 
 .writer-follow{
     padding: 1rem 0;
