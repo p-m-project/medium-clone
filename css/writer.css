@@ -265,6 +265,17 @@
     font-size: 4vw;
     }
 }
+.number-article-section h2{
+font-size: calc(3vw + 2px);
+width: calc(54% - 6px);
+height: calc(26vh - 20px);
+padding: calc(1.5vw + 5px);
+margin: 10px calc(6vw + 1px);
+border-radius: 50px;
+transition: transform calc(1s - 120ms);
+background-color: #AEBAB1;
+}
+
 @media screen and (max-width:400px){
     .article-section-save-like i {
     font-size: 5vw;
