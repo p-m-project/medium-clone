@@ -40,7 +40,10 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 3em;
 }
-
+#writer-btn-follow{
+    margin-top: 2em;
+    margin-left: 1em;
+}
 .button-writer{
     padding: 18px 37px;
     border-radius: 30px;
