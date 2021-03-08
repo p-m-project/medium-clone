@@ -9,8 +9,7 @@
 
 .profile-biugrafi{
     display: flex;
-    flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
+    flex-direction: row-reverse;
     margin-right: 4.75em;
 }
 
