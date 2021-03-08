@@ -28,19 +28,8 @@ function loadThumbnail(thumbnail){
     } 
 }
 
-/*function countWords(){
-    function numbers(){
-        let getWords=document.querySelector('.new-post-container').innerHTML.toString.split(" ");
-        if(getWords.length>60){
-            return 2.5
-        }
-        else return 1
-    };
-    document.getElementById('post-words').innerHTML= numbers();
-}*/
 function countWords(){
     function numbers(){
-       // let getWords=document.querySelector('.new-post-container').innerHTML.toString.split(" ");
         if(getWords.length>60){
             return 2.5
         }
