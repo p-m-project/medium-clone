@@ -280,3 +280,27 @@ background-color: #AEBAB1;
     font-size: 5vw;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .profile-biugrafi {
+        margin-right: 0.25em; 
+   } 
+  }
+
+  @media only screen and (min-width: 375px) {
+    .profile-biugrafi {
+        margin-right: 0.25em; 
+   } 
+  }
+
+  @media only screen and (min-width: 768px) {
+    .profile-biugrafi {
+        margin-right: .25em; 
+   } 
+  }
+
+  @media only screen and (min-width: 1024px) {
+    .profile-biugrafi {
+        margin-right:4.25em; 
+   } 
+  }
