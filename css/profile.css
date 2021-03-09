@@ -1,19 +1,31 @@
+.nav, .nav-signin{
+    z-index: 4;
+    position: absolute;
+}
 .all-part-profile{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 253px 1fr;
+    gap: 1vw;
     position: relative;
 }
 
-.profile-left{
-    grid-column: 2/span 3;
-    position: sticky;
-    top: 10%;
+.profile-top{
+    width: 100%;
+    height: 177px;
+    background-color: white;
+    grid-row: 1;
+    position: fixed;
+    top: 75px;
+    z-index: 2;
+    border-bottom: solid 1px #5a5a5a28;
+    transition: top .3s linear;
 }
 .profile{
-    padding-left: 10em;
-    padding-top: 1em;
-    grid-column: 4/span 6;
+    grid-column:5/span 4;
+    grid-row: 2;
     position: relative;
+    margin: 2em 0 2em;
 }
 
 .profile-about{
@@ -29,7 +41,20 @@
 .profile-about h1{
     margin-bottom: 1em;
 }
-
+.profile-image{
+    margin: 2vh 0 2vh;
+    padding: 0 5vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+.profile-img-form{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-end;
+    justify-content: center;
+}
 .profile-image img{
     width: 100px;
     border-radius: 50px;
@@ -37,10 +62,13 @@
     margin: .5em 0;
 }
 
-.profile-image{
-    margin: 2em 0 2em;
-}
 
+#imgInp{
+    font-size:1rem;
+    display: inline-block;
+    height: fit-content;
+    align-self: flex-end;
+}
 .profile-image a{
     margin-bottom: 1em;
 }
@@ -157,162 +185,36 @@
     -webkit-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
   }
-
-  @media screen and (min-width:320px) and (max-width:768px){
+  @media screen and (min-width:700px) and (max-width:1250px){
     .profile{
-        padding-left: 3em;
-        padding-right: 3em;
+        grid-column:4/span 5;
+        grid-row: 2;
     }
-}
+    
+  }
+  @media screen and (max-width:700px){
+    .profile{
+        grid-column:3/span 8;
+        grid-row: 2;
+    }
+    
+  }
+  @media screen and (max-width:768px){
 
-@media screen and (min-width:320px) and (max-width:768px){
+    .profile-image {
+        margin: 2em 0 0;
+    }
     .profile-image img {
         width: 80px;
         border-radius: 50px;
         height: 80px;
         margin-top: .5em;
     }
-}
-
-@media screen and (min-width:320px) and (max-width:768px){
-    .profile-image {
-        margin: 2em 0 0;
-    }
+   
 }
 /* ***************** responsive input */
-@media screen and (max-width:320px){
-    .profile-name{
-        width:12em;
-    }
-  }
 
-@media screen and (min-width:320px) and (max-width:600px){
-.profile-name {
-    width:13em;
-    }
-}
 
-@media screen and (min-width:600px){
-    .profile-name {
-        width:100%;
-    }
-}
-
-  /* ****************************1 */
-  @media screen and (max-width:320px){
-    .profile-username{
-        width:12em;
-    }
-  }
-
-@media screen and (min-width:320px) and (max-width:600px){
-.profile-username {
-    width:13em;
-    }
-}
-
-@media screen and (min-width:600px){
-    .profile-username {
-        width:100%;
-    }
-}
-  /* ****************************2 */
-  @media screen and (max-width:320px){
-    .profile-bio{
-        width:12em;
-    }
-  }
-
-@media screen and (min-width:320px) and (max-width:600px){
-.profile-bio {
-    width:13em;
-    }
-}
-
-@media screen and (min-width:600px){
-    .profile-bio {
-        width:100%;
-    }
-}
-  /* ****************************3 */
-  @media screen and (max-width:320px){
-    .profile-gmail{
-        width:12em;
-    }
-  }
-
-@media screen and (min-width:320px) and (max-width:600px){
-.profile-gmail {
-    width:13em;
-    }
-}
-
-@media screen and (min-width:600px){
-    .profile-gmail {
-        width:100%;
-    }
-}
-  /* ****************************4 */
-  @media screen and (max-width:320px){
-    .security-password{
-        width:12em;
-    }
-  }
-
-@media screen and (min-width:320px) and (max-width:600px){
-    .security-password {
-    width:13em;
-    }
-}
-
-@media screen and (min-width:600px){
-    .security-password {
-        width:100%;
-    }
-}
-  /* ****************************5 */
-  @media screen and (max-width:320px){
-    .security-new-password{
-        width:12em;
-    }
-  }
-
-@media screen and (min-width:320px) and (max-width:600px){
-    .security-new-password {
-    width:13em;
-    }
-}
-
-@media screen and (min-width:600px){
-    .security-new-password {
-        width:100%;
-    }
-}
-  /* ****************************6 */
-@media screen and (max-width:320px){
-    .security-confirm-new-password {
-        width:12em;
-        }
-    }
-@media screen and (min-width:320px) and (max-width:600px){
-    .security-confirm-new-password {
-        width:13em;
-    }
-}
-
-@media screen and (min-width:600px){
-    .security-confirm-new-password {
-        width:100%;
-    }
-}
-
-/* ***************** responsive input */
-
-@media screen and (min-width:320px){
-    #imgInp{
-        font-size: 6px;
-    }
-  }
    
 
 
